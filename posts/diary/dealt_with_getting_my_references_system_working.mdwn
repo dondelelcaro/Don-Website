@@ -1,0 +1,1 @@
+Dealt with getting my references system working properly, and did some analysis of the NMR data that was collected previously. I'm in the process of producing the scd plots, and doign some other random stuff that needs to be taken care of
