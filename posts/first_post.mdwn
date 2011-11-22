@@ -1,4 +1,4 @@
-This is the first post to this example blog. To add new posts, just add
-files to the posts/ subdirectory, or use the web form.
+Switching my website to use ikiwiki; hopefully I'll manage to actually modify it now.
+
 
 [[!tag tech]]
