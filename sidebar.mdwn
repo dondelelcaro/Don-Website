@@ -2,6 +2,12 @@
 [[!calendar pages="./posts/* and !*/Discussion"]]
 """]]
 
+[[Thoughts]]
+
+[[Projects]]
+
+[[Resumé]]
+
 [[Recent Comments|comments]]
 
 [[Archives]]
