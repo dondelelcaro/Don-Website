@@ -548,7 +548,7 @@ body {
 	border-color: #999;
 	border-style: none none solid none;
 	border-width: 1px;
-        background-image: /images/da_background.jpg;
+        background-image: url('/images/da_background.jpg');
         background-repeat: no-repeat;
 }
 
