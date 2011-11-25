@@ -1,0 +1,5 @@
+[[!sidebar content="""
+[[!calendar type=month month=07 year=2008 pages="diary/* and don.setup/Discussion"]]
+"""]]
+
+[[!inline pages="creation_month(07) and creation_year(2008) and diary/* and don.setup/Discussion" show=0 feeds=no reverse=yes]]
