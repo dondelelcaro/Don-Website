@@ -1,3 +1,4 @@
+/* -*- mode: css -*- */
 /* ikiwiki style sheet */
 
 /* Note that instead of modifying this style sheet, you can instead edit
@@ -547,6 +548,8 @@ body {
 	border-color: #999;
 	border-style: none none solid none;
 	border-width: 1px;
+        background-image: http://www.donarmstrong.com/images/da_background.jpg;
+        background-repeat: no-repeat;
 }
 
 .pageheader .header {
