@@ -1,1 +1,6 @@
-Considering that the last entry here was for 2004, I obviously haven't\nbeen updating this much.\n\nLots of things have happened since then, but I'll probably actually\nget around to describing them once I've finished the email->diary\ninterface that I'd planned on writing a long time ago.\n
+Considering that the last entry here was for 2004, I obviously haven't
+been updating this much.
+
+Lots of things have happened since then, but I'll probably actually
+get around to describing them once I've finished the email->diary
+interface that I'd planned on writing a long time ago.

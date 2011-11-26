@@ -1,1 +1,22 @@
-[gal://2003/april/frosted_subaru_04042003.jpg]Just wandered though a rather wierd bout of freezing rain. I think\nfreezing rain is my current least favorite form of weather, due mainly\nto the thick layers of ice it deposits upon every surface. Much, much\nmore nasty than snow, and wet to boot.\n\n[gal://2003/march/making_of_3dim_xyz/19.jpg]Been extreemly busy doing all sorts of random things here and there. I\ncut the first part of a CD with Chyna and Marcus, which we are\ncurrently planning on calling 3 Dimensions: x,y & z. I still haven't\nheard the final mastered cut, (as it's still in production) but I'm\nassured that it's pretty decent. [Yes, I know I need to get unlazy and\ncut a demo of my own. I'll get around to it eventually.]\n\nStuff is, as expected, going to pot in Iraq. Not too terribly happy\nwith the direction that the war has taken, but of course, I was\nunhappy with the absolute total lack of planning and direction comming\nfrom the current administration before we undertook this rather\nslipshod operation. Since the start, my dissapointment has been\ngrowing geometrically. When will the US learn that it's HumInt\ncapability is the laughing stock of developed nations? Granted, our\nElInt is (in general) top notch, but not everyone is stupid enough to\nsend vital messages in the clear, or use cell phones. (Yes, my GnuPG\nkey is available at [http://pgp.mit.edu|pgp.mit.edu])
+[gal://2003/april/frosted_subaru_04042003.jpg]Just wandered though a rather wierd bout of freezing rain. I think
+freezing rain is my current least favorite form of weather, due mainly
+to the thick layers of ice it deposits upon every surface. Much, much
+more nasty than snow, and wet to boot.
+
+[gal://2003/march/making_of_3dim_xyz/19.jpg]Been extreemly busy doing all sorts of random things here and there. I
+cut the first part of a CD with Chyna and Marcus, which we are
+currently planning on calling 3 Dimensions: x,y & z. I still haven't
+heard the final mastered cut, (as it's still in production) but I'm
+assured that it's pretty decent. [Yes, I know I need to get unlazy and
+cut a demo of my own. I'll get around to it eventually.]
+
+Stuff is, as expected, going to pot in Iraq. Not too terribly happy
+with the direction that the war has taken, but of course, I was
+unhappy with the absolute total lack of planning and direction comming
+from the current administration before we undertook this rather
+slipshod operation. Since the start, my dissapointment has been
+growing geometrically. When will the US learn that it's HumInt
+capability is the laughing stock of developed nations? Granted, our
+ElInt is (in general) top notch, but not everyone is stupid enough to
+send vital messages in the clear, or use cell phones. (Yes, my GnuPG
+key is available at [http://pgp.mit.edu|pgp.mit.edu])
