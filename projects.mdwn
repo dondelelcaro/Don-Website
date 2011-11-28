@@ -52,7 +52,7 @@ Microarray data from affymetrix datafiles.
 LaTeX Math to PNG
 -----------------
 Converts LaTeX math formula to PNG files. ($$x^2_0+y^2_0=r^2_0$$)
-becomes [[!img http://rzlab.ucr.edu/scripts/latexmath2png/latexmath2png.pl]]
+becomes ![rendered equation](http://rzlab.ucr.edu/scripts/latexmath2png/latexmath2png.pl)
 
  * [CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/latexmath2png/?root=RZ+Lab+CVS)
  * [Source](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/latexmath2png/latexmath2png.pl?rev=HEAD&root=RZ+Lab+CVS&content-type=text/vnd.viewcvs-markup)
