@@ -1,0 +1,52 @@
+Resume
+======
+
+[Don Armstrong](http://www.donarmstrong.com/)
+<don@donarmstrong.com>
+<http://www.donarmstrong.com>
+[Phone contact information available via e-mail.]
+
+I am a practitioner of the art of solving problems as elegantly and
+practically as possible. I seek to enhance my abilities to solve
+problems in the digital realm by learning (and inventing where
+appropriate) new methods and techniques, and to help others achieve
+their goals by removing or smoothing over ponderous obstacles in their
+path. If you have difficult problems for which a digital approach
+seems appropriate, I'm the person to talk to to find a solution.
+
+Education
+----------
+* Doctor of Philosophy in Cell, Molecular and Developmental Biology from [UC Riverside](http://www.ucr.edu), 2008
+* Bachelor of Science in [Biology](http://bio.ucr.edu) from [UC Riverside](http://www.ucr.edu), 2001
+* Graduate, Scholar with Distinction from [Marina High School](http://www.hbuhsd.k12.ca.us/mhs/), 1997
+
+Experience
+----------
+* July 2002-July 2003: Researcher for Socratech, LLC
+    * Affymetrix Gene Microarray Analysis using R, and Perl.
+	* Custom designed cell, tissue and data tracking system in perl
+	* Analysis of MA results using Gene Ontology
+	* Literature minining using custom designed Perl scripts to search pubmed.
+* Jun. 2000-Jun 2001: Computer Resource Coordinator for [UC Riverside](http://www.ucr.edu) 
+    * Network administration/design of a 2000+ node network
+	* developed web based registration system using bash, dhcp, perl, php and mysql
+	* Developed network monitoring system
+      ([rnm](http://rnm.sourceforge.net)) using php, mysql, perl, and
+      snmp.
+	* Supervised a staff of 13 RCCs<LI>Administration of 7+ Unix Servers (Apache,ISC DHCP, MySQL, mod_perl, slash)
+	<LI>Computer Lab Administration (NT)
+	<LI>Developed a printer recharge/tracking system using card readers, perl, mysql, and lpr-ng
+	<LI>Developed a customer-tech Help Request System/Billing System using php, mysql, smtp, and perl
+	
+Skills
+------
+
+
+Projects
+--------
+[Current projects|projects]
+
+References
+----------
+Available Upon Request.
+
