@@ -14,7 +14,7 @@ nav {
 }
 
 #pagebody #content img { 
-        margin: 1em;
+        margin: 0.4em;
  }
 
 #pagebody #content p:nth-of-type(odd) img { 
