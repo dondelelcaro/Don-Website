@@ -1,0 +1,81 @@
+Projects
+========
+
+ These are some of the more recent publicly available projects that
+ I've been working on. Most of the code here is available under the
+ GPL, but check the licences in individual files or e-mail me if it is
+ unclear. Everything here is primarily used by me, and may not be
+ suitable for you. Feel free to e-mail me with any questions or
+ patches, though. As always, Caveat Lector.
+
+
+
+Reference System
+----------------
+
+Originally written in PHP, the reference system is being totally
+rewritten in perl with mod_perl, postgresql and various other
+routines. It was originally designed to track scholarly articles and
+hold note and references related to them. However, the new version of
+the system will be used to track everything from books to images to
+newspapers to songs. Basically, it's a portable memory system that
+happens to be web based and accessible from any where in the planet.
+
+ * [PHP CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/ref_php/?root=Ref+CVS)
+ * [New CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/ref/?root=Ref+CVS)
+
+Utilities Modules
+-----------------
+The new reference system has lead me to redesign many of the modules
+that I use alot. Most of them now can be plugged into and out of perl
+programs at will, decreasing development time of mod_perl based web
+projects. More importantly, it makes my code a lot more modular, and
+keeps me from going insane tracking it all.
+
+ * Class::Modular is a superclass that allows one to generate a single
+   class from modules spread throughout multiple files and overload
+   methods within that class at will. Da::DB inherits from
+   Class::Modular. [svn repository](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/?root=Class+Modular)
+ * Da::DB is the main Database class. All (or almost all) database
+   interaction occurs through da_dbh objects or dynamically loaded sub
+   modules of Da::DB. (The new Template::Provider code is an example
+   of a loadable sub module.) [svn repository](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/?root=Da+DB)
+
+Micro Array Utilities
+---------------------
+These R functions and a few perl scripts are used to analyse Gene
+Microarray data from affymetrix datafiles.
+
+  * [CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/ma_utilities/?root=RZ+Lab+CVS)
+  * [Download](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/ma_utilities/ma_utilities.tar.gz?tarball=1&root=RZ+Lab+CVS)
+
+LaTeX Math to PNG
+-----------------
+Converts LaTeX math formula to PNG files. ($$x^2_0+y^2_0=r^2_0$$)
+becomes [[!img http://rzlab.ucr.edu/scripts/latexmath2png/latexmath2png.pl]]
+
+ * [CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/latexmath2png/?root=RZ+Lab+CVS)
+ * [Source](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/latexmath2png/latexmath2png.pl?rev=HEAD&root=RZ+Lab+CVS&content-type=text/vnd.viewcvs-markup)
+ * [Download](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/latexmath2png/latexmath2png.tar.gz?tarball=1&root=RZ+Lab+CVS)
+
+Diary Script
+--------------------
+
+ * [Source](diary/diary.html)
+ * [Download](diary/diary.gz)
+ 
+Helical Wheel Plots
+-------------------
+Plots alpha helical wheels with hydrophobic moment according to the
+wif scale (not woct).
+
+ * [Program](<http://rzlab.ucr.edu/scripts/wheel/wheel.cgi?sequence=ABCDEFGHIJLKMNOP&submit=Submit)
+ * [Source](http://rzlab.ucr.edu/scripts/wheel/wheel.html)
+ * [Download](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/wheel/wheel.tar.gz?tarball=1&root=RZ+Lab+CVS)
+ * [CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/wheel/?root=RZ+Lab+CVS)
+
+Frog's Leap Website
+-------------------
+Various Scripts and HTML design for both the flash and html sections of the site using perl and javascript.
+* [Link](http://www.frogsleap.com)
+
