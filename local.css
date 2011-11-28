@@ -13,6 +13,14 @@ nav {
 	display: block;
 }
 
+#pagebody #content img:nth-of-type(odd) { 
+        float: left;
+}
+
+#pagebody #content img:nth-of-type(even) { 
+        float: right;
+}
+
 .header {
 	margin: 0;
 	font-size: 140%;
