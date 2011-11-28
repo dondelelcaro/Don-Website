@@ -2,7 +2,7 @@
 [[!calendar pages="./posts/* and !*/Discussion"]]
 """]]
 
-[[Thoughts]]
+<!-- [[Thoughts]] -->
 
 [[Projects]]
 
