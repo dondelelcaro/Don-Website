@@ -13,12 +13,18 @@ nav {
 	display: block;
 }
 
+#pagebody #content img { 
+        margin: 1em;
+ }
+
 #pagebody #content p:nth-of-type(odd) img { 
         float: left;
+        clear: left;
 }
 
 #pagebody #content p:nth-of-type(even) img { 
         float: right;
+        clear: right;
 }
 
 .header {
