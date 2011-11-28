@@ -13,11 +13,11 @@ nav {
 	display: block;
 }
 
-img:nth-of-type(odd) { 
+#pagebody #content p:nth-of-type(odd) img { 
         float: left;
 }
 
-img:nth-of-type(even) { 
+#pagebody #content p:nth-of-type(even) img { 
         float: right;
 }
 
