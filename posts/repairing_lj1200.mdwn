@@ -1,0 +1,14 @@
+[[!meta title="LaserJet 1200 Printer Repair"]]
+
+[[!agimg /2011/printer_repair_20111205/solenoid_1.jpg]] My lab's aging
+LaserJet 1200 recently started failing in an interesting fashion. It
+would print a page nicely, but then attempt to feed a second page
+before the first had finished, leading to a jam. Some googling lead me
+to [this page](http://www.fixyourownprinter.com/forums/printer/68177)
+which indicated that the feed solenoid was sticking. After a failed
+attempt to clean gunk off of the feed solenoid arm (and failing to
+find anything else wrong, I wrapped the feed solenoid arm in scotch
+tape and attempted again. Viola, a printer working once again.
+
+[[!agimg /2011/printer_repair_20111205/solenoid_2.jpg]]
+
