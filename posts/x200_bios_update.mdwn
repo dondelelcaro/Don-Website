@@ -1,0 +1,35 @@
+[[!meta title="X200 Bios Update on Debian"]] 
+
+Updating the bios on my X200 Tablet was surprisingly simple in Debian.
+Often, updating bios requires some sort of Windows or Dos boot disk
+and all kinds of machinations to make that happen. Lenovo provides an
+iso image to update the bios which alleviates some of these problems,
+but as the X series don't have built-in CDROM drives (and I don't have
+an ultrabay), 
+
+All you have to do is download the
+[iso](http://download.lenovo.com/ibmdl/pub/pc/pccbbs/mobiles/7wuj43uc.iso),
+install syslinux `aptitude install syslinux`, and configure grub to
+start memdisk and boot off of the iso. You can do this by copying the
+iso to your boot partition (`cp 7wuj43uc.iso /boot/;`), copying
+memdisk to the boot partition (`cp /usr/lib/syslinux/memdisk /boot/;`
+and adding an entry to your grub.cfg like the following (putting it in
+/etc/grub.d/40_custom is probably the most reasonable).
+
+    menuentry "Thinkpad x200 BIOS Upgrade to 3.19" {
+           insmod part_msdos
+           insmod ext2
+           set root='(hd0,msdos1)'
+           linux16 /memdisk iso
+           initrd16 /7wuj43uc.iso
+    }
+
+Note that your configuration will be slightly different depending on
+whether you have a separate /boot partition (I do) or not.
+
+Then you just need to boot the laptop, select the bios upgrade option
+in grub, and tell the program that you really do want to upgrade the
+bios and that you really do have a full battery and the laptop plugged
+into an AC adapter.
+
+[[!tag debian tech x200]]
