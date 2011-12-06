@@ -1,0 +1,4 @@
+[[!meta title="pages tagged x200"]]
+
+[[!inline pages="tagged(x200)" actions="no" archive="yes"
+feedshow=10]]
