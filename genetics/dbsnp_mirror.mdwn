@@ -5,7 +5,8 @@ Getting Files
 
 Assuming you are interested in humans (like I am) the following will
 download the databases and schemas for the current release of dbsnp.
-For humans, this is currently ≈60G, and takes about a while to retrieve.
+For humans, this is currently ≈60G, and takes a while to retrieve
+(about 24 hours or so).
 
     for a in {organism,shared}_{data,schema}; do 
         lftp -c "open ftp.ncbi.nlm.nih.gov; cd /snp/organisms/human_9606/database/; mirror $a";
@@ -85,24 +86,24 @@ Once the process above has finished, you can actually query the
 database. For example, to select information about rs17849502 with its
 chromosome and position, you do something like the following:
 
-   SELECT scpr.snp_id AS snp_id,
-          scpr.chr AS chr,
-          scpr.pos AS pos,
-          scpr.orien AS orien,
-          scl.allele AS ref,
-          uv.var_str AS var_str,
-          ruv.var_str AS rev_var_str,
-          ml.locus_id AS uid,
-          ml.locus_symbol AS symbol,
-          gitn.gene_name AS description
-          FROM snp s
-            JOIN b135_snpchrposonref_37_3 scpr ON s.snp_id=scpr.snp_id
-            JOIN b135_snpcontigloc_37_3 scl ON scpr.snp_id=scl.snp_id
-            JOIN b135_contiginfo_37_3 ci ON scl.ctg_id = ci.ctg_id
-            LEFT OUTER JOIN b132_snpcontiglocusid_37_1 ml ON s.snp_id=ml.snp_id
-            LEFT OUTER JOIN geneidtoname gitn ON ml.locus_id=gitn.gene_id
-            JOIN univariation uv ON s.univar_id=uv.univar_id
-            JOIN univariation ruv ON uv.rev_univar_id=ruv.univar_id
-   WHERE ci.group_term LIKE 'GRCh%' AND s.snp_id='17849502';
+    SELECT scpr.snp_id AS snp_id,
+           scpr.chr AS chr,
+           scpr.pos AS pos,
+           scpr.orien AS orien,
+           scl.allele AS ref,
+           uv.var_str AS var_str,
+           ruv.var_str AS rev_var_str,
+           ml.locus_id AS uid,
+           ml.locus_symbol AS symbol,
+           gitn.gene_name AS description
+           FROM snp s
+             JOIN b135_snpchrposonref_37_3 scpr ON s.snp_id=scpr.snp_id
+             JOIN b135_snpcontigloc_37_3 scl ON scpr.snp_id=scl.snp_id
+             JOIN b135_contiginfo_37_3 ci ON scl.ctg_id = ci.ctg_id
+             LEFT OUTER JOIN b132_snpcontiglocusid_37_1 ml ON s.snp_id=ml.snp_id
+             LEFT OUTER JOIN geneidtoname gitn ON ml.locus_id=gitn.gene_id
+             JOIN univariation uv ON s.univar_id=uv.univar_id
+             JOIN univariation ruv ON uv.rev_univar_id=ruv.univar_id
+    WHERE ci.group_term LIKE 'GRCh%' AND s.snp_id='17849502';
 
 [I personally use this very query in a program called snp_info, which I'll probably share later.]
