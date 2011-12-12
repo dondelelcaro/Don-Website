@@ -1,0 +1,108 @@
+[[!meta title="Postgresql dbsnp Mirror"]] 
+
+Getting Files
+-------------
+
+Assuming you are interested in humans (like I am) the following will
+download the databases and schemas for the current release of dbsnp.
+For humans, this is currently ≈60G, and takes about a while to retrieve.
+
+    for a in {organism,shared}_{data,schema}; do 
+        lftp -c "open ftp.ncbi.nlm.nih.gov; cd /snp/organisms/human_9606/database/; mirror $a";
+    done;
+
+
+Preparing SQL Schemas
+---------------------
+
+If you're loading the human databases, I've already done the work for
+you. Simply use my
+[git repository](http://git.donarmstrong.com/dbsnp.git) (`git init
+db_snp_utils; git pull http://git.donarmstrong.com/dbsnp.git`).
+
+Otherwise, you'll want to use
+[mssql_psql_conversion.pl](http://git.donarmstrong.com/?p=dbsnp.git;a=blob;f=utils/mssql_psql_conversion.pl;hb=HEAD)
+in my dbsnp git repository to convert your organism's schema into
+appropriate bits. Something like the following will get you close (you
+may still need to tweak the sql manually):
+
+    for a in {organism,data}_schema/*.sql; do 
+	    ./mssql_psql_conversion.pl ${a} > ${a%%.sql}_postgrseql.sql;
+	done;
+	
+Loading data
+------------
+
+Once the schema are correct, you want to load the schema and the data,
+then apply the constraints and indexes. This will take some time even
+on a fairly fast machine.
+[I would expect at least 2-3 days, unless you have exceptionally fast disks.]
+
+I have included a script in the utils directory of the git repository
+above called
+[load_snp_data.sh](http://git.donarmstrong.com/?p=dbsnp.git;a=blob;f=utils/load_snp_data.sh;hb=HEAD),
+which applies the schema, loads the data, and then applies the indexes
+and constraints. It looks like the following:
+
+    psql -c 'DROP DATABASE snp';
+    psql -c 'CREATE DATABASE snp';
+    
+    DATA_DIR=/srv/ncbi/db_snp/
+    SCHEMA_DIR=/srv/ncbi/db_snp_utils/schema
+    UTIL_DIR=${SCHEMA_DIR}/../utils/
+    
+    (cd ${SCHEMA_DIR}/shared_schema;
+        cat dbSNP_main_table_postgresql.sql |psql snp;
+    )
+    (cd ${SCHEMA_DIR}/human_9606_schema;
+        cat *_table_postgresql.sql|psql snp;
+        ${UTIL_DIR}/human_gty1_indexes_creation.pl create trigger |psql snp;
+    )
+    (cd ${DATA_DIR}/shared_data;
+        for a in $(find -type f -iname '*.bcp.gz' -printf '%f\n'|sort); do
+    	echo $a;
+    	zcat $a | perl -pe 's/\r/\\r/g' |psql snp -c "COPY ${a%%.bcp.gz} FROM STDIN WITH NULL ''";
+        done;
+    )
+    (cd ${DATA_DIR}/organism_data;
+        for a in $(find -type f -iname '*.bcp.gz' -printf '%f\n'|sort); do
+    	echo $a;
+    	zcat $a | perl -pe 's/\r/\\r/g' |psql snp -c "COPY ${a%%.bcp.gz} FROM STDIN WITH NULL ''";
+        done;
+    )
+    (cd ${SCHEMA_DIR}/shared_schema;
+        cat dbSNP_main_index_postgresql.sql dbSNP_main_constraint_postgresql.sql|psql snp;
+    )
+    (cd ${SCHEMA_DIR}/human_9606_schema;
+        cat *_{index,constraint}_postgresql.sql|psql snp;
+        ${UTIL_DIR}/human_gty1_indexes_creation.pl index |psql snp;
+    )
+
+Querying the database
+---------------------
+
+Once the process above has finished, you can actually query the
+database. For example, to select information about rs17849502 with its
+chromosome and position, you do something like the following:
+
+   SELECT scpr.snp_id AS snp_id,
+          scpr.chr AS chr,
+          scpr.pos AS pos,
+          scpr.orien AS orien,
+          scl.allele AS ref,
+          uv.var_str AS var_str,
+          ruv.var_str AS rev_var_str,
+          ml.locus_id AS uid,
+          ml.locus_symbol AS symbol,
+          gitn.gene_name AS description
+          FROM snp s
+            JOIN b135_snpchrposonref_37_3 scpr ON s.snp_id=scpr.snp_id
+            JOIN b135_snpcontigloc_37_3 scl ON scpr.snp_id=scl.snp_id
+            JOIN b135_contiginfo_37_3 ci ON scl.ctg_id = ci.ctg_id
+            LEFT OUTER JOIN b132_snpcontiglocusid_37_1 ml ON s.snp_id=ml.snp_id
+            LEFT OUTER JOIN geneidtoname gitn ON ml.locus_id=gitn.gene_id
+            JOIN univariation uv ON s.univar_id=uv.univar_id
+            JOIN univariation ruv ON uv.rev_univar_id=ruv.univar_id
+   WHERE ci.group_term LIKE 'GRCh%' AND s.snp_id='17849502';
+
+[I personally use this very query in a program called snp_info, which I'll probably share later.]
