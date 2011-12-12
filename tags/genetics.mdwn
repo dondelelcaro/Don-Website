@@ -1,0 +1,4 @@
+[[!meta title="pages tagged genetics"]]
+
+[[!inline pages="tagged(genetics)" actions="no" archive="yes"
+feedshow=10]]
