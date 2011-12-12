@@ -10,4 +10,4 @@ build 135, I wrote up [[what to do|dbsnp_mirror]], and shared the
 utilities and schemas I used.
 
 
-[[!tags genetics,snp,biology,tech]]
+[[!tag genetics snp biology tech]]
