@@ -1,0 +1,13 @@
+[[!meta title="Making a dbsnp mirror"]]
+
+If you're doing genetics and use SNP, you've probably often wanted to
+extract information from dbSNP. A long time ago, I wrote some scripts
+to scrape their webpages for information. Now that I'm dealing with
+millions of SNPs, that's no longer possible. I needed my own mirror of
+dbSNP. I did this as of build 132, and since they've now released
+build 135, I wrote up [[what to do|dbsnp_mirror]], and shared the
+[git repository](http://git.donarmstrong.com/dbsnp.git) which has the
+utilities and schemas I used.
+
+
+[[!tags genetics,snp,biology,tech]]
