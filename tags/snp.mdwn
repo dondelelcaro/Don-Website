@@ -1,0 +1,4 @@
+[[!meta title="pages tagged snp"]]
+
+[[!inline pages="tagged(snp)" actions="no" archive="yes"
+feedshow=10]]
