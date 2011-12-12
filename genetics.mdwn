@@ -1,0 +1,3 @@
+Various bits of information about genetics
+
+ * [[Making a mirror of dbsnp|dbsnp_mirror]]
