@@ -8,10 +8,9 @@ download the databases and schemas for the current release of dbsnp.
 For humans, this is currently ≈60G, and takes a while to retrieve
 (about 24 hours or so).
 
-    for a in {organism,shared}_{data,schema}; do 
-        lftp -c "open ftp.ncbi.nlm.nih.gov; cd /snp/organisms/human_9606/database/; mirror $a";
-    done;
-
+   rsync -rvP --include 'organism_*' --exclude '**' rsync://ftp.ncbi.nlm.nih.gov/snp/organisms/human_9606/database/ .
+   rsync -rvP rsync://ftp.ncbi.nlm.nih.gov/snp/database/shared_data .
+   rsync -rvP rsync://ftp.ncbi.nlm.nih.gov/snp/database/shared_schema .
 
 Preparing SQL Schemas
 ---------------------
