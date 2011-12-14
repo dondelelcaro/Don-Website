@@ -78,6 +78,45 @@ and constraints. It looks like the following:
         ${UTIL_DIR}/human_gty1_indexes_creation.pl index |psql snp;
     )
 
+Permissions on the database
+---------------------------
+
+Since I have my database on a server separate from the workstations
+(and other machines) that I often do work on, I need remote access to
+the database. To make this easy (and avoid having to hard code
+database details into the few dozen scripts I use), I created a
+postgresql service called *snp*.
+
+An entry like this:
+
+    [snp]
+     dbname=snp
+     user=snpuser
+     password=somepassword
+     port=9212
+     host=snpdb.donarmstrong.com
+
+in the pg_service.conf file (in `/etc/postgresql-common` or
+`PGSYSCONFDIR`) will configure the service.
+
+You then need to make sure that the database server is listening on
+the appropriate ip address (edit the database's `postgresql.conf`
+file), and that *snpuser* has select privileges and can connect.
+A line like the following in pg_hba.conf
+
+    host    snp             snpuser         192.168.0.0/24           md5
+
+and the following sql will set that up for you.
+
+    CREATE USER snpuser WITH PASSWORD ('somepassword');
+	GRANT SELECT ON ALL TABLES IN SCHEMA public TO snpuser;
+	
+Then, to test, you should be able to run:
+
+    psql "service=snp" -c 'SELECT * FROM snp LIMIT 5';
+	
+On another machine.
+
 Querying the database
 ---------------------
 
