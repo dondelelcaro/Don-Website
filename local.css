@@ -538,7 +538,7 @@ hr {
 }
 
 code, pre {
-	background: #eee;
+	background: #abc;
 }
 
 pre {
@@ -558,7 +558,7 @@ body {
 	padding: 1em 2em;
 	position: relative;
 	overflow: hidden;
-	background: #eee;
+	background: #abc;
 	border-color: #999;
 	border-style: none none solid none;
 	border-width: 1px;
