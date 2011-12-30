@@ -1,0 +1,13 @@
+[[!meta title="Causative SLE allele in NCF2 paper published"]] 
+
+This year has been fairly good for our lab; a few years ago we found
+an association of
+[rs17849502](http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=rs17849502)
+with SLE. Finally, after significant work by our collaborators, we
+managed to demonstrate a functional significance of this SNP with
+possible importance for SLE. Changing H389 to Q reduces the function
+of the NADPH oxidase complex by 50% in Vav dependent Fcγ response.
+
+You can read the paper
+["Lupus-associated causal mutation in neutrophil cytosolic factor 2 (NCF2) brings unique insights to the structure and function of NADPH oxidase."](http://www.pnas.org/cgi/pmidlookup?view=long&pmid=22203994)
+(pmid: [22203994](http://www.ncbi.nlm.nih.gov/pubmed/22203994))
