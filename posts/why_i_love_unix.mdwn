@@ -1,0 +1,18 @@
+[[!meta title="YA Reason why I ♥ UNIX"]] 
+
+
+Trying to do some work for the
+[Mystery Hunt](http://www.mit.edu/~puzzle) which starts on Friday at
+noon, and the wireless at MIT keeps deauthenticating me for reason 1.
+(Which apparently is the dreaded "unknown reason for
+deauthentication".) Reassociating makes everything work again. Fast,
+hack solution:
+
+     while sleep 1s; do
+	  if iwconfig wireless |grep -q "ESSID:off"; then
+	    iwconfig wireless essid "MIT GUEST";
+        echo "reset wireless";
+	  fi;
+	 done;
+
+and I'm back at work with relatively continuous network connectivity.
