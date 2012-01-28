@@ -1,0 +1,4 @@
+[[!meta title="pages tagged ucr"]]
+
+[[!inline pages="tagged(ucr)" actions="no" archive="yes"
+feedshow=10]]
