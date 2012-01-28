@@ -1,0 +1,4 @@
+[[!meta title="pages tagged wicd"]]
+
+[[!inline pages="tagged(wicd)" actions="no" archive="yes"
+feedshow=10]]
