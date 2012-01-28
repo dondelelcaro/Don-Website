@@ -1,0 +1,35 @@
+[[!meta title="Using wicd on UCR's WPA network"]] 
+
+UC Riverside's wireless network uses WPA-EAP for the encrypted
+network. [The unencrypted network does a https based browser capture.]
+Unfortunately, none of the default wicd encryption templates support
+the precise brand of WPA that the network does, so you have to make
+your own template. Luckily, wicd makes this fairly simple:
+
+Create a new template, say, `/etc/wicd/encryption/templates/eap-only`,
+with appropriate contents.
+
+     name = EAP
+     author = Don Armstrong
+     version = 1
+     require identity *Identity passwd *Password 
+     
+     -----
+     ctrl_interface=/var/run/wpa_supplicant
+     network={
+        ssid="$_ESSID"
+        key_mgmt=WPA-EAP
+        identity="$_IDENTITY"
+        password="$_PASSWD"
+     }
+
+Then tell wicd about this new template by editing
+`/etc/wicd/encryption/templates/active` and adding `eap-only` to the
+existing list of templates, and restart wicd `/etc/init.d/wicd
+restart`.
+[I'm not sure if restarting wicd is necessary, but it shouldn't hurt.]
+
+Finally, configure the network using the appropriate wicd interface as
+usual.
+
+[[!tag debian tech wicd ucr]]
