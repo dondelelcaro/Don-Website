@@ -1,0 +1,31 @@
+[[!meta title="Changing Grub2's default boot entry and halting"]] 
+
+I have a mythtv box which (when working) records television shows for
+me. As I'm not interested in the vast majority of shows shown on US
+television, it spends most of it's time off, waiting for a show that I
+want to record. This requires using `nvram-wakeup`, and one of the
+oddities of my machine's bios is that it wants to be rebooted after
+setting the nvram.
+[This is likely do to Debian writing to the RTC after the nvram being updated, but not setting the RTC seems stupid.]
+After the reboot, the machine should halt, and grub should be
+configured to start the machine normally once the bios starts.
+
+As grub2 now supports named default entries, this is fairly
+straightforward. We create a menu entry like the following in
+`/etc/grub.d/40_custom`:
+
+     menuentry 'halt' {
+             set saved_entry=0;
+             save_env saved_entry;
+             load_env;
+             halt;
+     }
+
+make sure that `GRUB_DEFAULT="saved"` in `/etc/default/grub`; and set MythShutdownNvramRestartCmd to `/usr/sbin/grub-set-default halt`:
+
+     mysql mythdb -e "UPDATE settings SET data='/usr/sbin/grub-set-default halt' WHERE value='MythShutdownNvramRestartCmd'";
+
+and viola, the machine now behaves properly with grub2.
+
+[[!tag debian mythtv tech]]
+
