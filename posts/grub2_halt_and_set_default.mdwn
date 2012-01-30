@@ -6,7 +6,7 @@ television, it spends most of it's time off, waiting for a show that I
 want to record. This requires using `nvram-wakeup`, and one of the
 oddities of my machine's bios is that it wants to be rebooted after
 setting the nvram.
-[This is likely do to Debian writing to the RTC after the nvram being updated, but not setting the RTC seems stupid.]
+[This is likely due to Debian writing to the RTC after the nvram being updated, but not setting the RTC seems stupid.]
 After the reboot, the machine should halt, and grub should be
 configured to start the machine normally once the bios starts.
 
