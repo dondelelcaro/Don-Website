@@ -1,0 +1,26 @@
+[[!meta title="A Dozen and a Gross meet Numerology"]]
+
+Laurel sent me this gem[^1], which lead me to find the wikipedia page on
+[Mathematical Jokes](http://en.wikipedia.org/wiki/Mathematical_joke):
+
+[[!teximg code="\frac{12+114+20+3\sqrt{3}}{7}+5\cdot11=9^2+0"]] 
+A Dozen, a Gross, and a Score,  
+plus three times the square root of four,  
+divided by seven,  
+plus five times eleven,  
+equals nine squared and not a bit more.  
+
+And from there, I found another:
+
+[[!teximg code="\int^1_\sqrt[3]{3} z^2 dz \cdot \cos \frac{3\pi}{9}=\log \sqrt[3]{e}"]]
+
+Integral z-squared dz  
+From 1 to the cube root of 3  
+Times the cosine  
+Of three pi over 9  
+Equals log of the cube root of /e/.  
+
+
+[^1]: Apparently by Leigh Mercer
+
+[[!tags math]]
