@@ -3,7 +3,8 @@
 Laurel sent me this gem[^1], which lead me to find the wikipedia page on
 [Mathematical Jokes](http://en.wikipedia.org/wiki/Mathematical_joke):
 
-[[!teximg code="\frac{12+114+20+3\sqrt{3}}{7}+5\cdot11=9^2+0"]] 
+[[!teximg code="\frac{12+114+20+3\sqrt{3}}{7}+5\cdot11=9^2+0"]]
+
 A Dozen, a Gross, and a Score,  
 plus three times the square root of four,  
 divided by seven,  
@@ -12,7 +13,7 @@ equals nine squared and not a bit more.
 
 And from there, I found another:
 
-[[!teximg code="\int^1_\sqrt[3]{3} z^2 dz \cdot \cos \frac{3\pi}{9}=\log \sqrt[3]{e}"]]
+[[!teximg code="\int^1_{\sqrt[3]{3}} \! z^2\, \mathrm{d}z \cdot \cos \frac{3\pi}{9}=\log \sqrt[3]{e}"]]
 
 Integral z-squared dz  
 From 1 to the cube root of 3  
