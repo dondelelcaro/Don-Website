@@ -1,6 +1,6 @@
 [[!meta title="A Dozen and a Gross meet Numerology"]]
 
-Laurel sent me this gem[^1], which lead me to find the wikipedia page on
+Laurel sent me this gem [^1], which lead me to find the wikipedia page on
 [Mathematical Jokes](http://en.wikipedia.org/wiki/Mathematical_joke):
 
 [[!teximg code="\frac{12+114+20+3\sqrt{3}}{7}+5\cdot11=9^2+0"]]
