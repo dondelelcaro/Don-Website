@@ -19,7 +19,7 @@ Integral z-squared dz
 From 1 to the cube root of 3  
 Times the cosine  
 Of three pi over 9  
-Equals log of the cube root of /e/.  
+Equals log of the cube root of e.  
 
 
 [^1]: Apparently by Leigh Mercer
