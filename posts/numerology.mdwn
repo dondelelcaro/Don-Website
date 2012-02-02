@@ -13,7 +13,7 @@ equals nine squared and not a bit more.
 
 And from there, I found another:
 
-[[!teximg code="\int^1_{\sqrt[3]{3}} \! z^2\, \mathrm{d}z \cdot \cos \frac{3\pi}{9}=\log \sqrt[3]{e}"]]
+[[!teximg code="\int^{\sqrt[3]{3}}_1 \! z^2\, \mathrm{d}z \cdot \cos \frac{3\pi}{9}=\log \sqrt[3]{e}"]]
 
 Integral z-squared dz  
 From 1 to the cube root of 3  
