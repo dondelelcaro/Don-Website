@@ -17,12 +17,12 @@ nav {
         margin: 0.4em;
  }
 
-#pagebody #content p:nth-of-type(odd) img { 
+p:nth-of-type(odd) img.agimg { 
         float: left;
         clear: left;
 }
 
-#pagebody #content p:nth-of-type(even) img { 
+p:nth-of-type(even) img.agimg { 
         float: right;
         clear: right;
 }
