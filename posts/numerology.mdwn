@@ -24,4 +24,4 @@ Equals log of the cube root of /e/.
 
 [^1]: Apparently by Leigh Mercer
 
-[[!tags math]]
+[[!tag math]]
