@@ -1,0 +1,57 @@
+[[!meta title="Debian R Archive"]]
+
+
+I've spent a bit of time building on Charles Blundell and Dirk
+Eddelbuettel's [cran2deb](http://debian.cran.r-project.org/) work to
+build most of [CRAN](http://cran.r-project.org),
+[Bioconductor](http://bioconductor.org), and
+[omegahat](http://www.omegahat.org) for
+[Debian](http://www.debian.org). Currently, only amd64 on unstable is
+built, but I plan to build amd64 and i386 on stable too.
+
+Using the R Package Archive
+---------------------------
+
+Add an appropriate line to your /etc/apt/sources.list like the following:
+
+    deb http://debian-r.debian.net/debian-r/ unstable main
+
+Get the signing key and check it:
+
+    gpg --recv-keys AE05705B842492A68F75D64E01BF7284B26DD379;
+    gpg --check-sigs AE05705B842492A68F75D64E01BF7284B26DD379;
+
+Verify that it is at least signed by Don Armstrong twice (`808D0FD0`
+and `D98C0FBA`). The `D98C0FBA` key is in the Debian Developer
+keyring, and both are in the strong set. Then actually add the key:
+
+    gpg --export AE05705B842492A68F75D64E01BF7284B26DD379 \
+	 |sudo apt-key add -;
+
+Then you can `apt-get update; apt-get install` to your heart's
+content.
+
+Mirroring debian-r.debian.net
+-----------------------------
+
+If you wish to mirror debian-r.debian.net, please use the standard
+Debian mirror scripts explained here:
+[http://www.debian.org/mirror/ftpmirror] using
+[rsync://debian-r.debian.net/debian-r/].
+
+Additional Information
+----------------------
+
+These packages have been built in a fairly automated fashion, and not
+tested in any significant way. They are currently versioned using a
+~debianr suffix, which should help to avoid trouncing on existing
+official Debian packages (which are of much higher quality.)
+
+There are also some packages which have not yet built due to various
+bugs; I plan on trying to get to them as I am able. If there is a
+package which you do not see in the archive, but need (and which has a
+DFSG free license), please e-mail me and I will prioritize getting it
+working.
+
+If you have additional questions, please contact
+[Don Armstrong](mailto:don@donarmstrong.com).

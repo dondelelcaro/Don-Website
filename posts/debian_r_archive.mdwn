@@ -1,0 +1,25 @@
+[[!meta title="Debian R Archive"]]
+
+For those of you were were in the various Debian infrastructure
+channels, you might have noticed that I was playing around with
+wanna-build, dak, sbuild, and buildd and friends.
+[Thanks to everyone who answered questions, btw.] Over the past week,
+I've been building most of [CRAN](http://cran.r-project.org),
+[Bioconductor](http://bioconductor.org), and
+[omegahat](http://www.omegahat.org) for unstable, amd64. I plan to
+build the same set of packages for i386, and will start a build
+shortly for stable as well. This effort builds on top of Charles
+Blundell and Dirk Eddelbuettel's
+[cran2deb](http://debian.cran.r-project.org/), which does most of the
+heavy lifting.
+
+If you're like me, and use lots of different R packages, or already
+use some of the R packages available on the previous build, you can
+simply point your sources.list to the [http://debian-r.debian.net]
+archive, load the appropriate GPG key, and away you go. I have a bit
+more information available [[debian_r|here]] and I will try to keep
+that page updated as I build other architectures and build out for
+stable.
+
+
+[[!tag debian tech r]]
