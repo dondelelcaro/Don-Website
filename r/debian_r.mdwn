@@ -35,9 +35,8 @@ Mirroring debian-r.debian.net
 -----------------------------
 
 If you wish to mirror debian-r.debian.net, please use the standard
-Debian mirror scripts explained here:
-[http://www.debian.org/mirror/ftpmirror] using
-[rsync://debian-r.debian.net/debian-r/].
+[Debian mirror scripts](http://www.debian.org/mirror/ftpmirror)
+explained here: using `rsync://debian-r.debian.net/debian-r/`.
 
 Additional Information
 ----------------------
