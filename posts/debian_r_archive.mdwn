@@ -17,7 +17,7 @@ If you're like me, and use lots of different R packages, or already
 use some of the R packages available on the previous build, you can
 simply point your sources.list to the [http://debian-r.debian.net]
 archive, load the appropriate GPG key, and away you go. I have a bit
-more information available [[debian_r|here]] and I will try to keep
+more information available [[here|debian_r]] and I will try to keep
 that page updated as I build other architectures and build out for
 stable.
 
