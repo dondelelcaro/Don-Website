@@ -1,0 +1,54 @@
+[[!meta title="Debbugs forcemerge support"]] 
+
+
+One of the earliest features I wrote for the Debian bug tracking
+system (Debbugs) after joining the team was support for forcibly
+merging bugs. Originally, merging two bugs required that the bugs be
+in exactly the same state before merging them; `forcemerge` removed
+this requirement.
+
+Unfortunately, the way I originally implemented this was shortsighted,
+and merely forced the merge partners to have the same values as the
+merge master. This meant that owners, blocking bugs, and many other
+things were silently changed, which meant that people weren't notified
+of changes, and bugs could end up in an inconsistent state.
+
+A while ago, I decided to fix this by calculating the changes required
+to actually merge the bugs, making those changes, and then merging the
+bugs normally; thus, doing everything that a maintainer would normally
+have done for them. This necessitated abstracting out the entire
+control apparatus into the `Debbugs::Control` module.
+
+Now that it's complete, you can do the following:
+
+    > forcemerge 1 2
+    Bug #1 [foo] new title
+    Bug #2 {Done: foo@bugs.something} [foo] foo
+    Unset bug forwarded-to-address
+    Severity set to 'wishlist' from 'grave'
+    3 was blocked by: 2
+    3 was not blocking any bugs.
+    Removed blocking bug(s) of 3: 2
+    2 was blocked by: 4
+    2 was not blocking any bugs.
+    Removed blocking bug(s) of 2: 4
+    Bug reopened
+    Removed annotation that bug was owned by bar@baz.com.
+    
+    Removed indication that 2 affects bleargh
+    Removed tag(s) unreproducible and moreinfo.
+    Merged 1 2
+    > thanks
+    Stopping processing here.
+
+and bug 2 now is merged with 1 and matches the state of 1.
+[The above is the control output from the appropriate bit of the `06_mail_handling.t` test.]
+
+This change also means that I'll be able to finally write support for
+control@ operations at submit@ time. Also, all of the bug
+modifications that happen at submit@ or nnn@ time (setting title,
+found, etc.) will be implemented as calls to Debbugs::Control so we
+can eventually keep a postgresql database updated in addition to the
+flatfile database.
+
+[[!tag debian tech debbugs]]
