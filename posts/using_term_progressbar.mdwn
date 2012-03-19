@@ -1,0 +1,31 @@
+[[!meta title="Using Term::Progressbar"]] 
+
+I've been working for a while on analyzing a fairly large dataset for
+my Lupus genetics project. One of the major annoyances with analyzing
+large datasets is not knowing when a particular part of the analysis
+is going to finish, and whether I should go back and rewrite part of
+the code to be faster, or just wait for it to finish. In R, I've been
+using txtProgressBar to handle this, but I hadn't bothered to find a
+similar module for perl until now.
+
+Luckily,
+[Term::ProgressBar](http://search.cpan.org/dist/Term-ProgressBar/)
+exists, and is pretty easy to use:
+
+	my $pos = $sfh->tell();
+    $sfh->seek(0,SEEK_END);
+    my $p = Term::ProgressBar->new({count => $sfh->tell,
+	                                remove => 1,
+									ETA => 'linear'});
+    $sfh->seek($pos,SEEK_SET);
+    while (<$sfh>) {
+		...; # yada yada yada
+		$p->update($sfh->tell());		
+	}
+
+producing useful output, which told me that my SQLite database
+creation routine would take about 2 days to finish instead of the 7
+years that the slightly less optimal version wanted.
+
+
+[[!tag tech perl]]
