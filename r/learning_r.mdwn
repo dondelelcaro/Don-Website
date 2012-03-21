@@ -1,0 +1,4 @@
+Here are a list of pages which belong to the learning R series.
+
+[[!map pages="./learning_r/* and !*/Discussion" show=title]]
+

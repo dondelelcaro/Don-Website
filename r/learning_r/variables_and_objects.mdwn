@@ -1,0 +1,14 @@
+[[!meta title="Learning R: Basic Variables and Objects"]]
+
+Eventually here, you'll see some explanation of basic usage of
+variables and objects in R. For the time being, there are just some
+tests of my
+[sweavealike](http://git.donarmstrong.com/?p=ikiwiki_plugins.git;a=blob;f=sweavealike.pm;hb=HEAD)
+plugin for IkiWiki.
+
+
+[[!sweavealike code=<<END
+a <- 1
+a <- a + 10
+print(a)
+END]]
