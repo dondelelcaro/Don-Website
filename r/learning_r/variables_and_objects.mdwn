@@ -7,11 +7,11 @@ tests of my
 plugin for IkiWiki.
 
 
-[[!sweavealike verbatim=1 code=<<END
+[[!sweavealike verbatim=1 code="""
 a <- 1
 a <- a + 10
 print(a)
-END]]
+"""]]
 
 
 testing
