@@ -14,8 +14,8 @@ print(a)
 """]]
 
 [[!sweavealike figure=1 echo=1 results="hide" code="""
-plot(1:10,(1:10)^2,xlab="x",ylab="x^2",main="Example figure")
-"""]
+plot(1:10,(1:10)^2,xlab="x",ylab="x^2",main="Example Figure")
+"""]]
 
 
 testing
