@@ -7,11 +7,15 @@ tests of my
 plugin for IkiWiki.
 
 
-[[!sweavealike verbatim=1 code="""
+[[!sweavealike echo=1 code="""
 a <- 1
 a <- a + 10
 print(a)
 """]]
+
+[[!sweavealike figure=1 echo=1 results="hide" code="""
+plot(1:10,(1:10)^2,xlab="x",ylab="x^2",main="Example figure")
+"""]
 
 
 testing
