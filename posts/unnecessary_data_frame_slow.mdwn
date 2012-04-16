@@ -1,0 +1,20 @@
+[[!meta title="Unnecessary Use of data.frame is Slow"]]
+
+I've been working for a while on a reasonably large Genome-Wide
+Association Study dataset which has lead me through various
+interesting parts of handing large datasets in R. This dataset is
+approximately 320,000 rows by 5000 columns. After getting Rmpi
+working, and handling the dataset by row so I don't run out of memory,
+I've managed to get pretty decent performance. However, one small
+section of the code seemed to be taking forever to run.
+
+It turns out that assigning data to a data.frame by row is incredibly
+slow in R. Thus, a section of my code which should have taken
+microseconds was taking tenths of seconds, and threatening to run all
+week. Using a matrix instead (which is basically what I want anyway)
+and converting to a data.frame at the very end makes the code multiple
+orders of magnitude faster.
+
+Moral of the story? Don't use data.frame unnecessarily.
+
+[[!tag tech r]]
