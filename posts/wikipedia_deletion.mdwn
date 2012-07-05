@@ -21,11 +21,12 @@ confusion about the copyright on the image, as
 contains Apache::Gallery's copyright. I didn't notice that during the
 7 day deletion review period because I rarely log into Wikipedia.
 
-A few days ago, I noticed, at asked for a
+A few days ago, I noticed the deletion and asked for a
 [Deletion Review](https://en.wikipedia.org/wiki/Wikipedia:Deletion_review).
 I assumed that my explanation that the copyright notice was for
-Apache::Gallery would be understood, and that at least the original
-reason for the deletion would be seen to be invalid. Instead, during
+Apache::Gallery would be understood (or at least believed), and that
+at least the original reason for the deletion would be seen to be
+invalid. Instead, during
 [the process](https://en.wikipedia.org/wiki/Wikipedia:Deletion_review/Log/2012_June_26#File:Boojum_tree_ucr_botanical_garden.jpg)
 I was questioned as to whether I actually took the picture, why I used
 GPLv2+ for the pictures, whether I was claiming other people's images,
