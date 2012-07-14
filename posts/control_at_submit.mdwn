@@ -1,0 +1,23 @@
+[[!meta title="Debbugs: Control at Submit time"]]
+
+One of the features that I have been asked for multiple times is the
+ability to use control@bugs.debian.org commands at
+submit@bugs.debian.org time. I have now implemented this with the
+following syntax:
+
+    Package: foo
+	Version: 1.0-3
+	Control: retitle -1 this is the title
+	Control: severity -1 bleargh
+	Control: summary -1 0
+	Control: forward -1 http://bugs.debian.org/nnn
+
+In short, you preface any control commands with Control:, -1 is the
+current bug, and the rest of each line is the control@ grammar you
+already know. This also now works for every kind of message to
+nnn@bugs.debian.org with the exception of messages received at
+nnn-done and nnn-forwarded. I don't know why you'd use it for anything
+else but submit@ messages, but hey, whatever works.
+
+
+[[!tag debian tech debbugs]]
