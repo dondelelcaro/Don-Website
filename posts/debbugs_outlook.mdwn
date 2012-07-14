@@ -1,0 +1,28 @@
+[[!meta title="Debbugs: outlook command"]]
+
+Neil McGovern asked me to add an additional feature to the BTS to
+support tracking the current status of attempts at fixing a bug. In
+past releases, we've used the nice commenting feature of
+bts.turmzimmer.net to keep track of what is going on in a particular
+nasty RC bug, who is working on it, and what needs to be done next (or
+if everyone can just ignore the bug).
+
+This feature should probably have already been in the BTS to start
+with, but now it is. In addition to the existing summary feature,
+where you can nominate a message or text to be the summary for a bug,
+there is an `outlook` command, which tracks the current status of the
+bug, and behaves in exactly the same way:
+
+    outlook 12345 not good
+	outlook 54321 0
+	thanks
+	
+	I'm totally stymied by #54321.
+
+for example.
+
+I plan to include the outlook in the bugscan output in the future too,
+so it'll be easily accessible. (And possibly up-to-the-minute with
+some javascript-fu.)
+
+[[!tag debian tech debbugs]]
