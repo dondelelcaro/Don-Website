@@ -1,0 +1,15 @@
+[[!meta title="Admixture"]]
+
+Admixture
+---------
+
+Measurements of Admixture
+=========================
+
+|Absolute Allele Frequency Differences (delta, δ)|
+|Shannon Information Content (SIC)|
+|Fisher Information Content (FIC) |
+|F statistics [[!teximg code="F_\mathrm{ST}" alt="Fst"]]|
+|Informativeness for Assignment Measure|
+[http://www.biomedcentral.com/1471-2164/12/622/]
+
