@@ -4,10 +4,25 @@ Variables and Objects
 ---------------------
 
 Like most computer languages, R uses variables as a means of storing
-information in memory and retrieving it later. A variable 
+information in memory and retrieving it later. Variables can be
+assigned to using the `<-` or `=` operator. For example, to assign the
+number `5` to the variable `foo`, you would write
+
+[[!sweavealike echo=1 results="hide" code="""
+foo <- 5
+"""]]
+
+Variables can retrieved simply by referring to them by name. For
+example, to add `8` to the variable `foo` and store the result in
+`bar`, you would do the following:
+
+[[!sweavealike echo=1 results="hide" code="""
+bar <- foo + 8
+"""]]
+
 
 In R, variables are more correctly called objects, because they have
-structure and do not directly refer to a memory.
+structure and do not directly refer to a specific memory location.
 
 Basic Types
 ----------

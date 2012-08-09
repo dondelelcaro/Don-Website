@@ -1,0 +1,45 @@
+[[!meta title="Wikipedia Deletion Reviews"]]
+
+Many community driven projects have a problem with overgrown
+bureaucratic processes reducing the desire and ability of casual
+contributors to contribute. Debian has struggled with this problem,
+with efforts like Debian Maintainers and sponsorship to address it,
+but it's insidious and difficult to completely overcome. I recently
+ran into this problem again with Wikipedia, where I'm a casual
+contributor (I probably average an edit a month).
+
+[[!agimg /2004/05_may/bot_garden_20040528/002_the_boojum_tree_20040528.jpg]] Sometime in 2006, I uploaded an image of a Boojum tree I took in 2004
+to Wikipedia to provide an image for the
+[Boojum tree](http://en.wikipedia.org/wiki/Boojum_tree) article. It
+wasn't a particularly awe inspiring image, as I took it while I was
+teaching second quarter freshmen biology on campus, and showing the
+students the awesome
+[Botanical Gardens at UCR](http://gardens.ucr.edu). In 2011, a
+Wikipedia user asked for deletion of the image because of some
+confusion about the copyright on the image, as
+[Apache::Gallery](http://apachegallery.dk/)'s default template footer
+contains Apache::Gallery's copyright. I didn't notice that during the
+7 day deletion review period because I rarely log into Wikipedia.
+
+A few days ago, I noticed the deletion and asked for a
+[Deletion Review](https://en.wikipedia.org/wiki/Wikipedia:Deletion_review).
+I assumed that my explanation that the copyright notice was for
+Apache::Gallery would be understood (or at least believed), and that
+at least the original reason for the deletion would be seen to be
+invalid. Instead, during
+[the process](https://en.wikipedia.org/wiki/Wikipedia:Deletion_review/Log/2012_June_26#File:Boojum_tree_ucr_botanical_garden.jpg)
+I was questioned as to whether I actually took the picture, why I used
+GPLv2+ for the pictures, whether I was claiming other people's images,
+and whether the image was actually good enough to be in Wikipedia in
+the first place. Hundreds of lines of text, an edit to the template in
+A::G, hours wasted, people still unsatisfied, and the potential
+contributor (myself) feeling so annoyed with the entire process that I
+bothered to write this blog entry.
+
+While I'm not sure what to do about Wikipedia, I've been forcibly
+reminded of how important enabling easy contributions are, and how
+alienated one can feel when one is stymied by them to the point that
+your (admittedly insignificant) contribution to a project no longer
+seems worth the effort.
+
+[[!tag debian tech wikipedia]]
