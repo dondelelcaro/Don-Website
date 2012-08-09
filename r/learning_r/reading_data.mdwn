@@ -1,0 +1,7 @@
+[[!meta title="Reading Data into R"]]
+
+Most of the time that I use R, I'm operating on data which has been
+generated or entered somewhere else. For me, that means SNP genotyping
+results, microarray scans, and spreadsheets. For you, that may mean
+stock market prices, Census data, or any one of a myriad of other data
+formats. 
