@@ -1,0 +1,125 @@
+[[!meta title="Migrating from Subversion to git with git-annex"]] 
+
+Recently, I've started converting many of my subversion repositories
+to git, some of which contain fairly large files (2-3G). However, git
+can be slow to deal with repositories with large files, and it also
+isn't able to selectively discard unneeded files when disk space is
+pressing. Thankfully,
+[git-annex](https://www.google.com/search?q=git-annex) resolves most
+of these problems with git, but the process required to use git-annex
+on a converted subversion repository is slightly complicated.
+
+Basic conversion of svn to git
+------------------------------
+The basic conversion of svn to git is done using git-svn:
+
+     git svn clone file:///srv/svn/foo --no-metadata -A authors.txt -T trunk foo
+
+where /srv/svn/foo is the subversion repository, authors.txt is a list
+of `login = Full Name <email@example.com>` pairs matching each of the
+subversion commit authors, and foo is the git repository to create.
+
+git-svn has a ton of useful options, but the basic invocation above is
+all I'm concerned with.
+
+Migrating large files from git into git-annex
+---------------------------------------------
+
+In order to migrate from git to a git+git-annex setup, we'll have to
+walk the entire commit history, and edit each commit to instead store
+large files in git-annex, replacing the large file with a symlink, and
+finally eliminate all of the references to the old large objects, and
+do garbage collection.
+
+Because we may have the same file move around, we're going to use the
+git-annex SHA1 backend instead of the default WORM backend which is
+based on filename and size, and init git-annex.
+
+      cd foo; echo '* annex.backend=SHA1' > .git/info/attributes
+	  git annex init
+
+Then, we're going to filter out the large files using `git
+filter-branch`. To do that, we'll first, we'll create a little helper
+script `git_annex_add.sh`, which will remove the file from the git
+repository, add to git annex, and fix up the symlinks:
+
+     #!/bin/bash
+     f="$1";
+     git rm --cached "${f}";
+     git annex add "${f}";
+     annexdest="$(/bin/readlink -v ${f})";
+     ln -sf "${annexdest#../../}" "${f}";
+     echo -n "Added: "
+     ls -l "${f}";
+
+Then we will run filter-branch, and annex all files larger than 5
+megabytes.
+[Tweak the find command if you want to do something different.]
+
+     git filter-branch  --tag-name-filter cat --tree-filter \
+    'find . -ipath \*.git\* -prune -o -path \*.temp\* -prune -o -size +5M -type f -print0|xargs -0 -r -n1 ~/git_annex_add.sh;
+     git reset HEAD .git-rewrite; :' -- master
+
+This operation will take a while.
+[It would be better to do this during the initial svn→git conversion, but since that requires more knowledge of git-svn, svn, git, and git-annex internals than I have, and I only have to do this once for each repository, it's not worth my time.]
+
+Now we have successfully switched everything to using git-annex, and
+we need to clean out the old references to the files:
+
+     rm .git/svn -rf;
+	 rm -rf .git/refs/original .git/refs/remote/trunk .git/refs/remote/git-svn;
+	 git reflog expire --expire=now --all
+	 git gc --prune=now
+	 git gc --prune=now --aggressive
+
+(I'm not sure if the last two commands need to be separate; I'm cargo
+culting a bit there.)
+
+Storing all git-annex files in a remote repository
+--------------------------------------------------
+
+Because git-annex allows you to easily throw away files which are no
+longer referred to by the tip of any branch using git annex unneeded
+(and because I'd like all of the files on my central remote
+repository), I'm going to shove all of the git annex files into the
+remote bare repository. Normally, you would use `git annex copy
+--to=remote;` to do this, but because that only copies needed files,
+not everything, we'll have to do it manually.
+
+First, create the remote repository:
+
+     git init --bare /srv/git/foo.git
+ 	 cd /srv/git/foo.git; git annex init foo.example.com
+	 
+Add the remote to the local repository, push to the remote, and sync
+the objects and sync the annex:
+
+     git remote add origin ssh://foo.example.com/srv/git/foo.git
+	 git push origin master
+	 rsync -avP .git/annex/objects ssh://foo.example.com/srv/git/foo.git/annex/.;
+	 git annex sync
+	 
+Finally, on the remote, run `git annex fsck` to clean up the links to
+the imported objects:
+
+ 	 cd /srv/git/foo.git; git annex fsck;
+
+Unresolved issues
+-----------------
+I don't know if the above works properly for branches. I suspect that
+it does not. I also have not exhaustively tested this methodology to
+verify that all of the history is present in every case. But hopefully
+this post (or some modification of it) will be helpful to you.
+
+Credit
+------
+
+Many of the methodologies described here I originally found in
+[tyger's git-annex forum post](http://git-annex.branchable.com/forum/migrate_existing_git_repository_to_git-annex/),
+the `git gc` stuff came from random google searches about shrinking
+git repositories, and the rsync suggestion came from joeyh (author of
+git-annex) and the other helpful denizens of #vcs-home on
+irc.oftc.net.
+
+
+[[!tag debian tech git git-annex]]
