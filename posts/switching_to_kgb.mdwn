@@ -1,12 +1,12 @@
 [[!meta title="Switching to KGB from CIA"]] 
 
-[http://cia.vc](CIA.vc) has unfortunately
-[http://shadowm.rewound.net/blog/archives/245-CIA.vc-is-dead.html](disappeared),
-and is [http://pastebin.com/9RBBniM1](unlikely to return) any time
+[CIA.vc](http://cia.vc) has unfortunately
+[disappeared](http://shadowm.rewound.net/blog/archives/245-CIA.vc-is-dead.html),
+and is [unlikely to return](http://pastebin.com/9RBBniM1) any time
 soon. I personally have decided to switch to
-[http://kgb.alioth.debian.org/](KGB), but other alternatives such as
-[http://fbi.github.com](FBI) and
-[http://www.catb.org/esr/irker/](irker) exist.
+[KGB](http://kgb.alioth.debian.org/), but other alternatives such as
+[FBI](http://fbi.github.com) and
+[irker](http://www.catb.org/esr/irker/) exist.
 
 
 To switch, you first need to find or set up a kgb bot. If this is a
