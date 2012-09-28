@@ -1,0 +1,4 @@
+[[!meta title="pages tagged kgb"]]
+
+[[!inline pages="tagged(kgb)" actions="no" archive="yes"
+feedshow=10]]
