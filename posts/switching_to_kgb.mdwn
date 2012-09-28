@@ -11,7 +11,7 @@ soon. I personally have decided to switch to
 
 To switch, you first need to find or set up a kgb bot. If this is a
 Debian associated FOSS project, feel free to contact me or join
-#kgb-devel on irc.oftc.net and ask for someone to allow your project
+\#kgb-devel on irc.oftc.net and ask for someone to allow your project
 to talk to their bot. Once you've found a bot, we need to set up the
 client. [I'll talk about bot set up at the end.]
 
