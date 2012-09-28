@@ -1,0 +1,104 @@
+[[!meta title="Switching to KGB from CIA"]] 
+
+[http://cia.vc](CIA.vc) has unfortunately
+[http://shadowm.rewound.net/blog/archives/245-CIA.vc-is-dead.html](disappeared),
+and is [http://pastebin.com/9RBBniM1](unlikely to return) any time
+soon. I personally have decided to switch to
+[http://kgb.alioth.debian.org/](KGB), but other alternatives such as
+[http://fbi.github.com](FBI) and
+[http://www.catb.org/esr/irker/](irker) exist.
+
+
+To switch, you first need to find or set up a kgb bot. If this is a
+Debian associated FOSS project, feel free to contact me or join
+#kgb-devel on irc.oftc.net and ask for someone to allow your project
+to talk to their bot. Once you've found a bot, we need to set up the
+client. [I'll talk about bot set up at the end.]
+
+kgb-client configuration
+------------------------
+
+Install the `kgb-client` and `kgb-client-git` packages. Currently, kgb
+only supports subversion and git, but I suspect this will be rectified
+shortly.
+
+For git repositories, add a post-receive hook like the following:
+
+    #!/bin/sh
+    tee hooks/reflog | kgb-client --conf /path/to/kgbclient.conf --repository git --git-reflog -
+
+For subversion repositories, add a post-commit hook like the following:
+
+    #!/bin/sh
+    kgb-client --conf /path/to/kgbclient.conf --repository svn "$1" "$2"
+	
+Then update the configuration file `/path/to/kgbclient.conf`:
+
+    ---
+	repo-id: my-repository
+	servers:
+	 - uri: http://servername:9999/
+	   password: verysecret
+
+
+Then, send the bot owner the password, repo-id, channel, and network
+you'd like the changes to be reported to.
+
+Configuring kgb-bot
+-------------------
+
+The bots just listen to soap requests and if the password matches,
+sends the commit to the appropriate IRC channel. To set one up,
+install `kgb-bot`.
+
+Then, enable the bot (set `BOT_ENBALED=1` in `/etc/default/kgb-bot`),
+and configure the bot's configuration file `/etc/kgb-bot/kgb.conf`:
+
+    ---
+    soap:
+      server_addr: 0.0.0.0
+      server_port: 9999
+      service_name: KGB
+    queue_limit: 150
+    log_file: "/var/log/kgb-bot.log"
+    repositories:
+      # just a name to identify it
+      my-repository:
+        # needs to be the same on the client
+        password: verysecret
+	networks:
+      oftc:
+        nick: KGB-you
+        ircname: KGB bot
+        username: kgb
+        password: ~
+        nickserv_password: yournickservpassword
+        server: irc.oftc.net
+        port: 6667
+      freenode:
+        nick: KGB-you
+        ircname: KGB bot
+        username: kgb
+        password: ~
+        nickserv_password: yournickservpassword
+        server: irc.freenode.net
+        port: 6667
+	channels:
+      - name: '#your-channel'
+        network: oftc
+        repos:
+         - your-repo
+	  - name: '#commits'
+	    network: freenode
+		repos:
+		 - your-repo
+		
+
+Then start the bot (`/etc/init.d/kgb-bot start`), and watch as it
+joins channels and reports your changes!
+
+You'll probably actually want to register whatever nick you are using
+on the networks, etc... but you can figure that out yourself!
+
+
+[[!tag debian tech kgb]]
