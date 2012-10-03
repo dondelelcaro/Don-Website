@@ -39,7 +39,9 @@ Then update the configuration file `/path/to/kgbclient.conf`:
 	servers:
 	 - uri: http://servername:9999/
 	   password: verysecret
-
+	# optional link to a website where the commits are;
+	# needs newish kgb-client and server
+	web-link: http://example.com/?p=my-repository;a=commitdiff;h=${commit}
 
 Then, send the bot owner the password, repo-id, channel, and network
 you'd like the changes to be reported to.
