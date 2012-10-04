@@ -1,0 +1,35 @@
+[[!meta title="Watching the Presidential Debates"]]
+
+Tonight I will be watching the presidential debates. Since I can't
+stand the commentators on any of the major news networks, I will once
+again be watching the debates on cspan. If you don't have cable (or
+your cable plan doesn't include CSPAN), you can watch the video feed
+online. If you're running Debian, you can also use rtmpdump and
+mplayer to play the stream on your computer fairly easily:
+
+      rtmpdump -v -r rtmpt://cp82346.live.edgefcs.net:1935/live?ovpfv=2.1.4 \
+	     --tcUrl rtmp://cp82346.live.edgefcs.net:1935/live?ovpfv=2.1.4 \
+		 --app live?ovpfv=2.1.4 --flashVer LNX.11,2,202,238 \
+		 --playpath CSPAN1@14845 \
+		 --swfVfy http://www.c-span.org/cspanVideoHD.swf \
+		 --pageUrl http://www.c-span.org/ | \
+		 mplayer -xy 3 -;
+
+Then you can find a
+[bingo](http://www.motherjones.com/mojo/2012/10/yes-we-have-presidential-debate-bingo)
+[card](http://www.jest.com/article/200173/first-presidential-debate-bingo)
+[of](http://minnesota.publicradio.org/collections/special/columns/news_cut/archive/2012/10/presidential_debate_bingo.shtml)
+[your](http://www.firedupmissouri.com/node/15837)
+[own](http://www.firedupmissouri.com/sites/default/newfiles/Debate%20Bingo.pdf),
+[and](http://bit.ly/2012electionbingo)
+[play](http://www.politico.com/blogs/media/2012/10/tonights-presidential-debate-drinking-game-137378.html)
+[debate](http://gintender.com/2012/09/presidential-debate-bingo-wisdom/)
+[bingo](http://pandodaily.com/2012/10/03/how-to-watch-the-presidential-debate-tonight-by-using-all-of-the-internets/)!
+[Or](http://www.debatedrinking.com/)
+[some](http://newsfeed.time.com/2012/10/03/obama-vs-romney-which-presidential-debate-drinking-game-is-right-for-you/)
+[other](http://gawker.com/5948495/butt+chugging-the-election-your-2012-presidential-debate-drinking-games)
+[horrible](http://www.upi.com/blog/2012/10/03/Your-guide-to-presidential-debate-drinking-games/9511349285779/)
+[drinking](http://cdn-www.i-am-bored.com/media/pres-debate-drinking-game.jpg)
+[game](http://jezebel.com/5948693/the-ultimate-presidential-debate-drinking-game-for-ladies).
+
+[[!tag politics tech]]
