@@ -60,7 +60,7 @@ and some code:
 
 and viola:
 
-| id         | chr |      pos | ideogram | ref | alt | orig_id    | gene   | [...] |
+| id         | chr |      pos | idiogram | ref | alt | orig_id    | gene   | [...] |
 |------------|-----|----------|----------|-----|-----|------------|--------|-------|
 | rs10000010 |   4 | 21618674 | 4p16.3   | T   | C   | rs10000010 | KCNIP4 | [...] |
 
