@@ -1,0 +1,69 @@
+[[!meta title="Finding out Cytobands/Idiograms for assemblies"]]
+
+In many organisms it is common to use
+[idiograms](https://secure.wikimedia.org/wikipedia/en/wiki/Cytogenetics#Advent_of_banding_techniques)
+or cytobands which provide information on approximately where
+something is located on a chromosome in reference to the chromosome's
+larger structure, or when exact locations are not required.
+
+Until recently, I didn't know where [NCBI](http://ncbi.nlm.nih.gov)
+kept their idiogram annotations, which made my
+[[mirror of dbsnp|genetics/dbsnp_mirror/]] (which I use to annotate my
+whole genome analyses) slightly less useful than it could have been.
+But, after a bit of searching of NCBI's ftp site, I was able to locate
+the file in the new
+[movie directory](ftp://ftp.ncbi.nlm.nih.gov/genomes/MapView/Homo_sapiens/objects/current/initial_release): 
+`ideogram_9606_GCF_000001305.13_850_V1`.
+
+Then, a quick bit of work with SQL, I have the following schema:
+
+    CREATE TABLE idiogram (
+           chr TEXT NOT NULL,
+           pq  TEXT NOT NULL,
+           idiogram TEXT NOT NULL,
+		   -- I think these are related to recombination rates, but I'm not sure
+           rstart INT NOT NULL,
+           rstop INT NOT NULL,
+           start INT NOT NULL,
+           stop INT NOT NULL,
+		   -- I believe this indicates whether the band is black or white
+           posneg TEXT NOT NULL
+           );
+           
+    CREATE UNIQUE INDEX ON idiogram(chr,pq,ideogram);
+    CREATE UNIQUE INDEX ON idiogram(chr,start);
+    CREATE UNIQUE INDEX ON idiogram(chr,stop);
+
+and an additional bit of SQL in my SNP annotation perl script:
+
+    SELECT CONCAT(chr,pq,idiogram) AS idiogram
+      FROM idiogram
+      WHERE idiogram.chr = ? AND idiogram.start <= ? AND idiogram.stop < ? LIMIT 1;
+
+and some code:
+
+    sub find_idiogram {
+        my %param = @_;
+    
+        my %info;
+        my $rv = $param{sth}->execute($param{chr},$param{pos},$param{pos}) //
+    	die "Unable to execute statement properly: ".$param{dbh}->errstr;
+        my ($idiogram) = map {ref $_ ?@{$_}:()} map {ref $_ ?@{$_}:()} $param{sth}->fetchall_arrayref([0]);
+        if ($param{sth}->err) {
+    	print STDERR $param{sth}->errstr;
+    	$param{sth}->finish;
+    	return 'NA';
+        }
+        $param{sth}->finish;
+        return $idiogram // 'NA';
+    }
+
+and viola:
+
+| id     | chr  |   pos    | ideogram   |     ref |    alt |    orig_id | gene | [...] |
+| rs10000010 |     4  |     21618674   |     4p16.3 | T   |    C   |    rs10000010  |    KCNIP4 | [...] |
+
+idiograms for every SNP.
+
+
+[[!tag genetics snp biology tech]]
