@@ -4,7 +4,7 @@ I was asked over the weekend how to plot SNPs which are associated
 with specific ethnicities; the following code is a really quick stab
 at the problem using the grid graphics engine in R.
 
-[[!sweavealike fig=1 echo=1 results="hide" code """
+[[!sweavealike fig=1 echo=1 results="hide" code="""
 require(grid)
 snp.position <- 1:10
 snp.integers <- sample.int(5,size=length(snp.position),replace=TRUE)
