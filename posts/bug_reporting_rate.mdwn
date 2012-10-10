@@ -13,9 +13,9 @@ plot this, lets only look at bugs ending in 00:
 
 
 Now, lets get the data into R and plot it.
-[For clarity, I'm not showing the R code, but it's available in the source cdoe for this post.]
+[For clarity, I'm not showing the R code, but it's available in the source code for this post.]
 
-[[!sweavealike width=800 fig=1 echo=0 code="""
+[[!sweavealike width=800 fig=1 echo=0 results="hide" code="""
 require(lattice)
 reporting.rate <- read.table("data/bug_reporting_rate.txt")
 colnames(reporting.rate) <- c("bug","epoch")
