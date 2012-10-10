@@ -17,7 +17,7 @@ Now, lets get the data into R and plot it.
 
 [[!sweavealike fig=0 echo=0 code="""
 print(getwd())
-"""]
+"""]]
 
 [[!sweavealike fig=1 echo=0 code="""
 require(lattice)
