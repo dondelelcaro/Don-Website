@@ -17,7 +17,7 @@ Now, lets get the data into R and plot it.
 
 [[!sweavealike results="hide" fig=1 echo=0 code="""
 require(lattice)
-reporting.rate <- read.table("data/bug_reporting_rate.txt")
+reporting.rate <- read.table("../data/bug_reporting_rate.txt")
 colnames(reporting.rate) <- c("bug","epoch")
 reporting.rate <- data.frame(reporting.rate)
 reporting.rate$bug <- as.numeric(gsub("\\\\.report","",gsub(".*\\\\/","",reporting.rate$bug)))
