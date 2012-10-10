@@ -27,13 +27,13 @@ reporting.rate$rate <- c(NA,(reporting.rate$bug[-1] - reporting.rate$bug[-nrow(r
 	(reporting.rate$epoch[-1]-reporting.rate$epoch[-nrow(reporting.rate)]))
 reporting.rate$day <- as.POSIXct(reporting.rate$epoch,origin="1970-01-01")
 ### show the reporting rate from 2003 onward with a lowess line
-xyplot(rate~day,reporting.rate[reporting.rate$epoch >= 1041408000,],
+print(xyplot(rate~day,reporting.rate[reporting.rate$epoch >= 1041408000,],
        panel=function(x,y,col,...){
 	     panel.xyplot(x,y,col="cyan",...);
 		 panel.loess(x,y,col="red",...);},
       ylim=c(0,0.005),
 	  ylab="Bugs per Second",
-	  xlab="Time")
+	  xlab="Time"))
 """]]
 
 From the plot (Bugs reported per second over time with a red loess fit
