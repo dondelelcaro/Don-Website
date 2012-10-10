@@ -20,7 +20,7 @@ require(lattice)
 reporting.rate <- read.table("data/bug_reporting_rate.txt")
 colnames(reporting.rate) <- c("bug","epoch")
 reporting.rate <- data.frame(reporting.rate)
-reporting.rate$bug <- as.numeric(gsub("\\.report","",gsub(".*\\/","",reporting.rate$bug)))
+reporting.rate$bug <- as.numeric(gsub("\\\\.report","",gsub(".*\\\\/","",reporting.rate$bug)))
 reporting.rate <- reporting.rate[order(as.numeric(reporting.rate$bug)),]
 ### this is the number of bugs submitted per second
 ### however, for bug numbers less than about 100000, this number is wrong.
