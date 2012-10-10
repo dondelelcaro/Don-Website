@@ -32,7 +32,7 @@ print(xyplot(rate~day,reporting.rate[reporting.rate$epoch >= 1041408000,],
        panel=function(x,y,col,...){
 	     panel.xyplot(x,y,col="cyan",...);
 		 panel.loess(x,y,col="red",...);},
-      ylim=c(0,0.005),
+      ylim=c(0,0.004),
 	  ylab="Bugs per Second",
 	  xlab="Time"))
 """]]
