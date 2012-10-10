@@ -1,0 +1,52 @@
+[[!meta title="Bug Reporting Rate in Debian"]]
+
+[Christian's most recent blog post](http://www.perrier.eu.org/weblog/2012/10/09#690000)
+got me wondering if the decline in the bug reporting rate in Debian
+was something new, or something which often happened during releases.
+So, lets try to figure that out. In the BTS, when a bug report is
+filed, the report is written to a file called `bugnum.report`, and
+then not touched from then on. Let's look at the modification date on
+that file to see when each bug was filed; and since we're going to
+plot this, lets only look at bugs ending in 00:
+
+    stat -c '%n %Y' /srv/bugs.debian.org/spool/{archive,db-h}/00/*.report > ~/reporting_rate.txt
+
+
+Now, lets get the data into R and plot it.
+[For clarity, I'm not showing the R code, but it's available in the source cdoe for this post.]
+
+[[!sweavealike results="hide" fig=1 echo=0 code="""
+reporting.rate <- read.table("data/bug_reporting_rate.txt")
+colnames(reporting.rate) <- c("bug","epoch")
+reporting.rate <- data.frame(reporting.rate)
+reporting.rate$bug <- as.numeric(gsub("\\.report","",gsub(".*\\/","",reporting.rate$bug)))
+reporting.rate <- reporting.rate[order(as.numeric(reporting.rate$bug)),]
+### this is the number of bugs submitted per second
+### however, for bug numbers less than about 100000, this number is wrong.
+reporting.rate$rate <- c(NA,(reporting.rate$bug[-1] - reporting.rate$bug[-nrow(reporting.rate)])/
+	(reporting.rate$epoch[-1]-reporting.rate$epoch[-nrow(reporting.rate)]))
+reporting.rate$day <- as.POSIXct(reporting.rate$epoch,origin="1970-01-01")
+### show the reporting rate from 2003 onward with a lowess line
+xyplot(rate~day,reporting.rate[reporting.rate$epoch >= 1041408000,],
+       panel=function(x,y,col,...){
+	     panel.xyplot(x,y,col="cyan",...);
+		 panel.loess(x,y,col="red",...);},
+      ylim=c(0,0.005),
+	  ylab="Bugs per Second",
+	  xlab="Time")
+"""]]
+
+From the plot (Bugs reported per second over time with a red loess fit
+line), it looks like we do see a decline during certain periods.
+However, there's an even more alarming trend of a decrease in bug
+reporting in Debian which has been happening since 2006. (Note that
+I've truncated the y scale significantly; there are periods in Debian
+where the bug rate is astronomically high, usually corresponding to
+mass bug filings; I've also limited the plot to data from 2003 on, as
+I have to clean up that data significantly before I can plot it like
+this.)
+
+Not sure exactly what that means, but it is troubling.
+
+
+[[!tag tech debian r debbugs]]
