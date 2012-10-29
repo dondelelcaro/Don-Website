@@ -19,8 +19,8 @@ kgb-client configuration
 ------------------------
 
 Install the `kgb-client` and `kgb-client-git` packages. Currently, kgb
-only supports subversion and git, but I suspect this will be rectified
-shortly.
+only supports subversion, git, and cvs, but support for additional
+VCSes continue to be added as kgb gains popularity.
 
 For git repositories, add a post-receive hook like the following:
 
