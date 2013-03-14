@@ -10,7 +10,7 @@ icons. It also automatically falls back to gravatar, so if you're
 using that service, things should "just work". Hopefully this will be
 primarily amusing, and people won't abuse it.
 
-[[!img http://cdn.libravatar.org/avatar/ef9dddd859f1f5a1fd6442a1ccf872ef?d=retro]]
+<img src="http://cdn.libravatar.org/avatar/ef9dddd859f1f5a1fd6442a1ccf872ef?d=retro">
 
 More importantly, but much less fun, the double encoding problems
 (where mails would get double-encoded if any of the headers contained
