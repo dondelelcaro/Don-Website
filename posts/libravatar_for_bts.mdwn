@@ -1,0 +1,21 @@
+[[!meta title="libravatar for the BTS (and boring encoding fixes)"]]
+
+While working on fixing a few encoding problems that I managed to
+introduce to the BTS almost half a year ago, I took a side bit of
+coding, and introduced [libravatar](https://www.libravatar.org/)
+support to the BTS. Every e-mail now has an avatar to the right which
+should correspond to the sender. Libravatar is a federated service,
+which means that if you control your domain, you can serve your own
+icons. It also automatically falls back to gravatar, so if you're
+using that service, things should "just work". Hopefully this will be
+primarily amusing, and people won't abuse it.
+
+<img src="http://cdn.libravatar.org/avatar/ef9dddd859f1f5a1fd6442a1ccf872ef?d=retro">
+
+More importantly, but much less fun, the double encoding problems
+(where mails would get double-encoded if any of the headers contained
+non-us-ascii text), and mojibake wontfix icon (☹) should be fixed now.
+If you see any additional cases of this, please report them to
+owner@bugs.debian.org.
+
+[[!tag tech debian debbugs]]
