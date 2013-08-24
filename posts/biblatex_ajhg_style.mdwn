@@ -1,0 +1,89 @@
+[[!meta title="Biblatex format for AJHG"]]
+
+I'm working on a paper on the genetic basis of lupus, which I'm
+submitting to the
+[American Journal of Human Genetics](http://www.cell.com/AJHG/), and
+since I've recently switched to the wonderful
+[biblatex](http://www.ctan.org/pkg/biblatex) and
+[biber](http://biblatex-biber.sourceforge.net/) from the standard
+bibtex, I've had to figure out how to customize the bibliography and
+citation format to fit the
+[standards of the journal](http://images.cell.com/images/EdImages/ajhg/AJHG_Information_for_Authors.pdf).
+Luckily, there are lots of good examples on
+[TeX's stackexchange](http://tex.stackechange.com), which enabled me
+to figure out how to do all of this.
+
+The following code in the preamble does almost all of the hard lifting:
+
+     \usepackage[backend=biber,hyperref=true,doi=false,url=false,isbn=false,maxbibnames=10,minbibnames=10,sorting=none,firstinits=true,autocite=superscript,style=numeric-comp]{biblatex}
+     \renewbibmacro{in:}{%
+       \ifentrytype{article}{}{%
+       \printtext{\bibstring{in}\intitlepunct}}}
+     % from http://tex.stackexchange.com/questions/12806/guidelines-for-customizing-biblatex-styles
+     \DeclareFieldFormat
+       [article,inbook,incollection,inproceedings,patent,thesis,unpublished,manual]
+       {title}{#1\isdot}
+     \DeclareFieldFormat{journaltitle}{#1}
+     \DeclareFieldFormat[article,periodical]{volume}{\mkbibemph{#1}}
+     \DeclareFieldFormat{year}{(#1)}
+     \DeclareNameAlias{default}{last-first}
+     \DeclareFieldFormat{pages}{#1}
+     %\renewbibmacro{journal}{#1}%
+     % from http://tex.stackexchange.com/questions/6743/biblatex-changing-the-order-of-entries
+     \renewbibmacro*{journal+issuetitle}{%
+     %   \setunit*{\addspace}%
+     %   (\printfield{year})%
+     %  \usebibmacro{date}%
+       \setunit*{\addspace}%
+       \usebibmacro{journal}%
+       \setunit*{\addspace}%
+       \iffieldundef{series}
+         {}
+         {\newunit
+          \printfield{series}%
+          \setunit{\addspace}}%
+        \newunit%
+       \printfield{volume}%
+     %  \setunit{\addspace}% DELETED
+     %  \usebibmacro{issue+date}% DELETED
+     %  \setunit{\addcolon\space}% DELETED
+     %  \usebibmacro{issue}% DELETED
+       \newunit}
+     \renewbibmacro*{title}{%
+       \printfield{year}%
+       \setunit*{\addspace}%
+       \newunit
+       \ifboolexpr{
+         test {\iffieldundef{title}}
+         and
+         test {\iffieldundef{subtitle}}
+       }
+         {}
+         {\printtext[title]{%
+            \printfield[titlecase]{title}%
+            \setunit{\subtitlepunct}%
+            \printfield[titlecase]{subtitle}}%
+          \newunit}%
+       \printfield{titleaddon}}
+     \renewbibmacro*{publisher+location+date}{%
+       \setunit*{\addspace}%
+       \printtext[parens]{\printlist{location}%
+       \iflistundef{publisher}
+         {\setunit*{\addcomma\space}}
+         {\setunit*{\addcolon\space}}%
+       \printlist{publisher}%
+     %  \setunit*{\addcomma\space}%
+     %  \usebibmacro{date}%
+       }%
+       \newunit}
+
+This, coupled with:
+
+     \newcommand{\citep}[1]{\autocite{#1}}
+     \newcommand{\citet}[1]{\citeauthor{#1}\autocite{#1}}
+
+enables my standard natbib workflow of \citep and \citet to work
+properly too. Eventually I'll move to just using \autocite everywhere,
+but for now, that's good enough.
+
+[[!tag latex tech biblatex]]
