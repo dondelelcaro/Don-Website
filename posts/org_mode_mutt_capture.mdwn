@@ -1,0 +1,42 @@
+[[!meta title="Using Mutt with Org Mode (with refile)"]]
+
+I use [org mode](http://orgmode.org/) extensively, and had added
+[Zack's](http://upsilon.cc/~zack/) workflow for
+[integrating mutt with org mode](http://upsilon.cc/~zack/blog/posts/2010/02/integrating_Mutt_with_Org-mode/)
+to my
+[~/.emacs](http://git.donarmstrong.com/?p=emacs.git;a=blob;f=.emacs;hb=HEAD)
+some time ago.
+
+However, I've been annoyed that refiling closes the org-capture frame
+before refiling finishes. The following
+[trivial modification](http://git.donarmstrong.com/?p=emacs.git;a=commitdiff;h=HEAD)
+to Zack's code (which I previously modified to work with org-mode >=
+0.8) waits to close the frame until you've finished refiling.
+
+     (require 'org-protocol)
+     (add-hook 'org-capture-mode-hook 'delete-other-windows)
+     (setq my-org-protocol-flag nil)
+     (defadvice org-capture-finalize (after delete-frame-at-end activate)
+       "Delete frame at remember finalization"
+       (progn (if my-org-protocol-flag (delete-frame))
+              (setq my-org-protocol-flag nil)))
+     (defadvice org-capture-refile (around delete-frame-after-refile activate)
+       "Delete frame at remember refile"
+       (if my-org-protocol-flag
+           (progn
+             (setq my-org-protocol-flag nil)
+             ad-do-it
+             (delete-frame))
+         ad-do-it)
+       )
+     (defadvice org-capture-kill (after delete-frame-at-end activate)
+       "Delete frame at remember abort"
+       (progn (if my-org-protocol-flag (delete-frame))
+              (setq my-org-protocol-flag nil)))
+     (defadvice org-protocol-capture (before set-org-protocol-flag activate)
+       (setq my-org-protocol-flag t))
+
+Now, the frame automatically disappears after you refile it, keeping
+my refile.org clean.
+
+[[!tag emacs debian org-mode tech mutt]]
