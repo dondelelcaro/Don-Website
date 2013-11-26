@@ -1,0 +1,20 @@
+[[!meta title="Dealing with Greenhouse Whiteflies"]]
+
+This weekend, I finally got around to dealing with the
+[Greenhouse whitefly](http://en.wikipedia.org/wiki/Greenhouse_whitefly)
+infestation we've had on the basil and mint in the kitchen window.
+We've previously tried
+[Pyrethrin](http://en.wikipedia.org/wiki/Pyrethrin)-based
+insecticides, but eventually the whiteflies came back.
+
+After a bit of research, it appears that insecticide resistance is a
+fairly common occurrence with whiteflies, and other alternative
+approaches are needed to manage the infestation. In our case, since
+the plants are relatively small, I opted for drowning the plants for a
+few moments, and then putting yellow sticky traps out. Hopefully this
+will at least let the basil come back and keep the whiteflies under
+wraps.
+
+[[!agimg 2013/11_November/whiteflies/whitefly_card.jpg ]]
+
+[[!tag house]]
