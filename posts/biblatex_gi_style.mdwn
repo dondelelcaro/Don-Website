@@ -6,7 +6,7 @@ Here's a biblatex format for
 
 The following code in the preamble does almost all of the hard lifting:
 
-[[!format latex """
+[[!format tex """
 \usepackage[backend=biber,hyperref=true,doi=true,url=false,isbn=false,maxbibnames=6,minbibnames=6,sorting=none,firstinits=true,terseinits=true,autocite=inline,style=numeric-comp]{biblatex}
 \renewbibmacro{in:}{%
   \ifentrytype{article}{}{%
