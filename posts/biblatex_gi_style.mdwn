@@ -1,0 +1,91 @@
+[[!meta title="Biblatex format for Genes & Immunity"]]
+
+Here's a biblatex format for
+[Genes & Immunity](http://www.nature.com/gene/index.html) (a
+[Nature](http://www.nature.com) imprint) which I needed recently:
+
+The following code in the preamble does almost all of the hard lifting:
+
+```latex
+\usepackage[backend=biber,hyperref=true,doi=true,url=false,isbn=false,maxbibnames=6,minbibnames=6,sorting=none,firstinits=true,terseinits=true,autocite=inline,style=numeric-comp]{biblatex}
+\renewbibmacro{in:}{%
+  \ifentrytype{article}{}{%
+  \printtext{\bibstring{in}\intitlepunct}}}
+% from http://tex.stackexchange.com/questions/12806/guidelines-for-customizing-biblatex-styles
+\DeclareCiteCommand{\parencite}[\mkbibbrackets]
+  {\usebibmacro{cite:init}%
+   \usebibmacro{prenote}}
+  {\usebibmacro{citeindex}%
+   \usebibmacro{cite:comp}}
+  {}
+  {\usebibmacro{cite:dump}%
+   \usebibmacro{postnote}}
+\DeclareMultiCiteCommand{\parencites}[\mkbibbrackets]{\parencite}{\multicitedelim}
+\DeclareFieldFormat
+  [article,inbook,incollection,inproceedings,patent,thesis,unpublished,manual]
+  {title}{#1\isdot}
+\DeclareFieldFormat{journaltitle}{\mkbibemph{#1}}
+\DeclareFieldFormat[article,periodical]{volume}{\mkbibbold{#1}\addcolon}
+\DeclareFieldFormat{year}{#1}
+\DeclareNameAlias{default}{last-first}
+\DeclareFieldFormat{pages}{#1}
+% from http://tex.stackexchange.com/questions/17583/biblatex-remove-commas-between-last-and-first-names-in-bibliography
+% remove commas between authors and first inits
+\renewcommand*{\revsdnamepunct}{}
+% from http://tex.stackexchange.com/questions/40798/how-do-i-get-et-al-to-appear-in-italics-when-using-textcite-or-citeauthor-w
+% make et al. /et al./
+\renewbibmacro*{name:andothers}{% Based on name:andothers from biblatex.def
+  \ifboolexpr{
+    test {\ifnumequal{\value{listcount}}{\value{liststop}}}
+    and
+    test \ifmorenames
+  }
+    {\ifnumgreater{\value{liststop}}{1}
+       {\finalandcomma}
+       {}%
+     \andothersdelim\bibstring[\emph]{andothers}}
+    {}}
+% \renewbibmacro{journal}{#1}%
+% from http://tex.stackexchange.com/questions/6743/biblatex-changing-the-order-of-entries
+\renewbibmacro*{journal+issuetitle}{%
+  \setunit*{\addspace}%
+  \usebibmacro{journal}%
+  \setunit*{\addspace}%
+  \printfield{year}%
+  \setunit*{\addspace}%
+  \iffieldundef{series}
+    {}
+    {\newunit
+     \printfield{series}%
+     \setunit{\addspace}}%
+  \newunit{\addsemicolon\space}%
+  \printfield{volume}%
+  \setunit*{\addspace}%
+  \newunit
+}
+\renewbibmacro*{title}{%
+  \newunit
+  \ifboolexpr{
+    test {\iffieldundef{title}}
+    and
+    test {\iffieldundef{subtitle}}
+  }
+    {}
+    {\printtext[title]{%
+       \printfield[titlecase]{title}%
+       \setunit{\subtitlepunct}%
+       \printfield[titlecase]{subtitle}}%
+     \newunit}%
+  \printfield{titleaddon}}
+\renewbibmacro*{publisher+location+date}{%
+  \setunit*{\addspace}%
+  \printtext[parens]{\printlist{location}%
+  \iflistundef{publisher}
+    {\setunit*{\addcomma\space}}
+    {\setunit*{\addcolon\space}}%
+  \printlist{publisher}%
+  }%
+  \newunit}
+```
+
+[[!tag latex tech biblatex]]
