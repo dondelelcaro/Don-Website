@@ -13,28 +13,30 @@ before refiling finishes. The following
 to Zack's code (which I previously modified to work with org-mode >=
 0.8) waits to close the frame until you've finished refiling.
 
-     (require 'org-protocol)
-     (add-hook 'org-capture-mode-hook 'delete-other-windows)
-     (setq my-org-protocol-flag nil)
-     (defadvice org-capture-finalize (after delete-frame-at-end activate)
-       "Delete frame at remember finalization"
-       (progn (if my-org-protocol-flag (delete-frame))
-              (setq my-org-protocol-flag nil)))
-     (defadvice org-capture-refile (around delete-frame-after-refile activate)
-       "Delete frame at remember refile"
-       (if my-org-protocol-flag
-           (progn
-             (setq my-org-protocol-flag nil)
-             ad-do-it
-             (delete-frame))
-         ad-do-it)
-       )
-     (defadvice org-capture-kill (after delete-frame-at-end activate)
-       "Delete frame at remember abort"
-       (progn (if my-org-protocol-flag (delete-frame))
-              (setq my-org-protocol-flag nil)))
-     (defadvice org-protocol-capture (before set-org-protocol-flag activate)
-       (setq my-org-protocol-flag t))
+[[!format el """
+(require 'org-protocol)
+(add-hook 'org-capture-mode-hook 'delete-other-windows)
+(setq my-org-protocol-flag nil)
+(defadvice org-capture-finalize (after delete-frame-at-end activate)
+  "Delete frame at remember finalization"
+  (progn (if my-org-protocol-flag (delete-frame))
+         (setq my-org-protocol-flag nil)))
+(defadvice org-capture-refile (around delete-frame-after-refile activate)
+  "Delete frame at remember refile"
+  (if my-org-protocol-flag
+      (progn
+        (setq my-org-protocol-flag nil)
+        ad-do-it
+        (delete-frame))
+    ad-do-it)
+  )
+(defadvice org-capture-kill (after delete-frame-at-end activate)
+  "Delete frame at remember abort"
+  (progn (if my-org-protocol-flag (delete-frame))
+         (setq my-org-protocol-flag nil)))
+(defadvice org-protocol-capture (before set-org-protocol-flag activate)
+  (setq my-org-protocol-flag t))
+"""]]
 
 Now, the frame automatically disappears after you refile it, keeping
 my refile.org clean.
