@@ -12,7 +12,7 @@ The following code in the preamble does almost all of the hard lifting:
   \ifentrytype{article}{}{%
   \printtext{\bibstring{in}\intitlepunct}}}
 % from http://tex.stackexchange.com/questions/12806/guidelines-for-customizing-biblatex-styles
-\\\DeclareCiteCommand{\parencite}[\mkbibbrackets]
+\\DeclareCiteCommand{\parencite}[\mkbibbrackets]
   {\usebibmacro{cite:init}%
    \usebibmacro{prenote}}
   {\usebibmacro{citeindex}%
@@ -20,15 +20,15 @@ The following code in the preamble does almost all of the hard lifting:
   {}
   {\usebibmacro{cite:dump}%
    \usebibmacro{postnote}}
-\\\DeclareMultiCiteCommand{\parencites}[\mkbibbrackets]{\parencite}{\multicitedelim}
-\\\DeclareFieldFormat
+\\DeclareMultiCiteCommand{\parencites}[\mkbibbrackets]{\parencite}{\multicitedelim}
+\\DeclareFieldFormat
   [article,inbook,incollection,inproceedings,patent,thesis,unpublished,manual]
   {title}{#1\isdot}
-\\\DeclareFieldFormat{journaltitle}{\mkbibemph{#1}}
-\\\DeclareFieldFormat[article,periodical]{volume}{\mkbibbold{#1}\addcolon}
-\\\DeclareFieldFormat{year}{#1}
-\\\DeclareNameAlias{default}{last-first}
-\\\DeclareFieldFormat{pages}{#1}
+\\DeclareFieldFormat{journaltitle}{\mkbibemph{#1}}
+\\DeclareFieldFormat[article,periodical]{volume}{\mkbibbold{#1}\addcolon}
+\\DeclareFieldFormat{year}{#1}
+\\DeclareNameAlias{default}{last-first}
+\\DeclareFieldFormat{pages}{#1}
 % from http://tex.stackexchange.com/questions/17583/biblatex-remove-commas-between-last-and-first-names-in-bibliography
 % remove commas between authors and first inits
 \renewcommand*{\revsdnamepunct}{}
