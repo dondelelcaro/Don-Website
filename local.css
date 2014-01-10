@@ -385,21 +385,21 @@ input#searchbox {
 }
 
 /* highlight plugin */
-pre.hl { color:#000000; background-color:#ffffff; }
-.hl.num { color:#2928ff; }
-.hl.esc { color:#ff00ff; }
-.hl.str { color:#ff0000; }
-.hl.dstr { color:#818100; }
-.hl.slc { color:#838183; font-style:italic; }
-.hl.com { color:#838183; font-style:italic; }
+pre.hl { color:#404048; background-color:#ddf; }
+.hl.num { color:#2020ff; }
+.hl.esc { color:#005858; }
+.hl.str { color:#2020ff; }
+.hl.dstr { color:#2020ff; }
+.hl.slc { color:#2020ff; font-style:italic; }
+.hl.com { color:#ff00c0; font-style:italic; }
 .hl.dir { color:#008200; }
-.hl.sym { color:#000000; }
-.hl.line { color:#555555; }
+.hl.sym { color:#404048; }
+.hl.line { color:#ff00c0; }
 .hl.mark { background-color:#ffffbb; }
-.hl.kwa { color:#000000; font-weight:bold; }
-.hl.kwb { color:#830000; }
-.hl.kwc { color:#000000; font-weight:bold; }
-.hl.kwd { color:#010181; }
+.hl.kwa { color:#008858; font-weight:bold; }
+.hl.kwb { color:#7040ff; font-weight:bold;}
+.hl.kwc { color:#87002f; font-weight:bold; }
+.hl.kwd { color:#404048; font-weight:bold;}
 
 /* calendar plugin */
 .month-calendar-day-this-day,
