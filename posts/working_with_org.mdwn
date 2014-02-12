@@ -1,0 +1,39 @@
+[[!meta title="Working with Org-mode: Committing Changes Everywhere"]]
+
+I'm a huge fan of [Org-mode](http://orgmode.org/), and I keep all of
+my org-mode files in git repositories which are under
+[myrepos](http://myrepos.branchable.com/) control.
+
+However, because I often make lots of changes to my agenda and notes,
+I hate having to manually visit each individual project and make
+changes to it.
+[And it's also annoying when I forget to commit a specific change and then have to try to get my laptop and desktop back into sync.]
+
+Luckily, myrepos can easily run a command in parallel in all of the
+repositories! The following "update_org_files" command will update all
+of my org-file containing repositories in parallel:
+
+[[!format sh """
+#!/bin/bash
+
+ORG_GREP='-e .org$ -e .org_archive$ -e .org_done$'
+
+if [ "x$1" == "xdoit" ]; then
+    if git status --porcelain -z | grep -z '^ M' | grep -zq $ORG_GREP; then
+        git status --porcelain -z | grep -z '^ M' | grep -z $ORG_GREP | \ 
+        sed -z 's/^ M//g' | \
+            xargs -0 git commit -m'update org files'
+        git push;
+    fi; 
+else
+    emacsclient -n -e '(org-save-all-org-buffers)' >/dev/null 2>&1
+    mr -d ~ -j5 run update_org_files doit;
+fi;
+"""]]
+
+An
+[updated version](http://git.donarmstrong.com/?p=bin.git;a=blob_plain;f=update_org_files;hb=HEAD)
+of this lives in my
+[git repository](http://git.donarmstrong.com/bin.git)
+
+[[!tag tech org-mode emacs debian]]
