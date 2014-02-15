@@ -1,0 +1,144 @@
+
+
+# Why I teach
+
+I have always wanted to know how everything works, interconnects, and
+evolved. That moment when a flash of insight shines a light on the
+underlying structure of nature is an incredible feeling. Like many
+researchers in science, I willingly subject myself to experimental
+failures, difficult-to-interpret results, funding difficulties, and
+long hours in order to receive that momentary feeling.
+
+I teach because I want to share the excitement of discovery and
+knowing, and I want others to be able to experience that excitement
+for themselves. It is also quite rewarding to see the glimmer of
+insight in my students eyes when they finally reach understanding for
+themselves.
+
+# General Goals for Students
+
+## Desire and Excitement
+
+If my students are *only* interested in learning the material I am
+teaching to earn credit, then I have failed as a teacher. I want to
+covey at least some of my excitement in the subject to them.
+Perhaps it's naïve, but I think that once students are excited about
+the material, they are more likely to succeed.
+
+## Informed Skepticism
+
+While only a small percentage of my students will become scientists, I
+want them all to know how science works, how to analyze claims, weigh
+evidence, do background research, and come to an independent
+understanding of nature. From politics to the latest false claim on
+the Internet, an ability to become informed, think critically, and
+analyze skeptically will help my students be conscientious members of
+our democratic society.
+
+# How I Teach
+
+## Task Analysis
+
+
+For each course, I identify course-specific overall goals that I want
+all of my students to achieve. Then, I plan a path to these goals,
+with a hierarchy of sub-goals along the way. This enables me to
+measure the effectiveness of my teaching and the students' progress at
+each step during the course. For example, in an introductory
+bioinformatics course, an overall goal might be to have students be
+able to use common bioinformatic databases to answer biological
+questions. A corresponding sub goal would be for students to be able
+to use dbSNP to select all genetic variants in a specific gene in a
+specific organism.
+
+## Learn By Doing
+
+Even though lecturing, demonstrations, and similar passive learning
+techniques are important, everyone learns best by doing. Mistakes,
+failure, experimentation, and learning from them are important parts
+of learning by doing, just as they are in science. To the greatest
+extent possible, I want to provide opportunities for students to learn
+by doing. I want students to learn by solving problems using the
+knowledge and resources they have gained in the course.
+
+## Individual Engagement
+
+In large courses it is very difficult to keep individual students
+engaged, as they feel they are just one face in a hundred and have
+limited opportunities to ask questions. When lecturing, I like to
+combat this by asking students questions directly, and getting
+students (even those at the back) to participate in demonstrations. I
+will also be accessible both in-person on campus, and via e-mail.
+Finally, I will encourage my teaching assistants (TAs) to be engaged
+with our students by asking TAs about students in their sections in TA
+meetings.
+
+## Students Teaching Others
+
+
+Having every student engaged with a teacher is a laudable goal, and
+may be achievable in small  in large ones, there will always
+be some people who are not reached. Students teaching other students
+is one method of extending a teacher's reach. In the past, I have had
+online forums or mailing lists for all courses that I have taught. In
+these forums, students are able to ask questions, and other students
+are able to answer them. In addition, students are able to reinforce
+their learning by answering other student's questions. You know a
+concept when you can teach others.
+
+## Technology
+
+Classroom technology is very useful in increasing the ability of
+students to learn, experiment, and measuring outcomes in the
+classroom. I plan on using:
+
+1.  Interactive websites to enable student's active learning by doing,
+    including exercises, experiments, and other activities.
+
+2.  Real-time online feedback using automated grading on a website to
+    the extent possible on homework so students know whether they
+    understand the material.
+
+3.  In-lecture questions through clickers or smart phones when the
+    course is too large to gauge student understanding of material by
+    asking questions of students or raising hands.
+
+4.  Recording lectures so that students (and I) can refer to them
+    later.
+
+5.  Forums, mailing lists, and other communication methods so that
+    students can learn cooperatively. When students explain material to
+    other students, it answers other student's questions and reinforces
+    their own knowledge.
+
+6.  Demonstrations in class and online, both real and simulated, when
+    appropriate to the material being taught.
+
+# Measuring Outcomes
+
+## Success and Failure
+
+I'm continuing to study how to be a more effective teacher by learning
+from other teachers and research into teaching techniques, and will
+continue to do that as long as I teach. I will measure the outcomes of
+my teaching in order to determine how effective I am. By correlating
+the teaching methods I use for each sub-goal of my course with student
+outcomes, over time I can identify the most effective teaching
+strategies for me.
+
+# Teaching Experiences
+
+## Teaching Assistant
+
+While a graduate student at UC Riverside, I was a teaching assistant
+for Introductory Biology, Introductory
+Genetics, Molecular Biology, and Developmental Biology.
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p><http://www.biology.ucr.edu/courses/UGcourses.html></p></div>
+
+
+</div>
+</div>

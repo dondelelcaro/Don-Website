@@ -1,55 +1,50 @@
-Resume
-======
+[[!meta title="Curriculum Vitæ, Research Statement, and Teaching Statement"]]
 
-[Don Armstrong](http://www.donarmstrong.com/)
+Introduction
+------------
 
+A brief statement of my research interests and teaching mission
+follows, and my [Curriculum Vitæ](resume/curriculum_vitae)
+([pdf](resume/dla-cv.pdf)),
+[Research Statement](resume/research_statement)
+([pdf](resume/research_statement.pdf)), and
+[Teaching Statement](resume/teaching_statement)
+([pdf](resume/teaching_statement.pdf)) are also available.
+
+For my contact information or additional references, please e-mail
 <don@donarmstrong.com>
 
-<http://www.donarmstrong.com>
+Research Focus
+--------------
 
-[Phone contact information available via e-mail.]
-
-I am a practitioner of the art of solving problems as elegantly and
-practically as possible. I seek to enhance my abilities to solve
-problems in the digital realm by learning (and inventing where
-appropriate) new methods and techniques, and to help others achieve
-their goals by removing or smoothing over ponderous obstacles in their
-path. If you have difficult problems for which a digital approach
-seems appropriate, I'm the person to talk to to find a solution.
-
-Education
-----------
-* Doctor of Philosophy in Cell, Molecular and Developmental Biology from [UC Riverside](http://www.ucr.edu), 2008
-* Bachelor of Science in [Biology](http://bio.ucr.edu) from [UC Riverside](http://www.ucr.edu), 2001
-* Graduate, Scholar with Distinction from [Marina High School](http://www.hbuhsd.k12.ca.us/mhs/), 1997
-
-Experience
-----------
-* July 2002-July 2003: Researcher for Socratech, LLC
-    * Affymetrix Gene Microarray Analysis using R, and Perl.
-	* Custom designed cell, tissue and data tracking system in perl
-	* Analysis of MA results using Gene Ontology
-	* Literature minining using custom designed Perl scripts to search pubmed.
-* Jun. 2000-Jun 2001: Computer Resource Coordinator for [UC Riverside](http://www.ucr.edu) 
-    * Network administration/design of a 2000+ node network
-	* developed web based registration system using bash, dhcp, perl, php and mysql
-	* Developed network monitoring system
-      ([rnm](http://rnm.sourceforge.net)) using php, mysql, perl, and
-      snmp.
-	* Supervised a staff of 13 RCCs<LI>Administration of 7+ Unix Servers (Apache,ISC DHCP, MySQL, mod_perl, slash)
-	<LI>Computer Lab Administration (NT)
-	<LI>Developed a printer recharge/tracking system using card readers, perl, mysql, and lpr-ng
-	<LI>Developed a customer-tech Help Request System/Billing System using php, mysql, smtp, and perl
-	
-Skills
-------
+My primary research focus is developing and using bioinformatics
+techniques to identify causes and mechanisms underlying human
+diseases, such as Systemic Lupus Erythematosus (SLE). I have
+identified multiple novel genes associated with SLE using both
+genome-wide association studies and trio-based studies in targeted
+regions. In collaborative work, I have identified a causal variant in
+NCF2
+([rs17849502](http://www.ncbi.nlm.nih.gov/projects/SNP/snp_ref.cgi?rs=rs17849502))
+using both *in silico* and *in vitro* approaches. I am currently
+working on identifying causal variants in additional associated genes
+using targeted deep sequencing using high-throughput variant analysis
+pipelines to prioritize variants for additional *in silico* and *in
+vitro* experiments. In the future, utilizing my extensive
+bioinformatic and software development experience, I will head a
+development group working on techniques for the storage, alignment,
+and analysis of terabytes (eventually petabytes) of next-generation
+sequencing data from collaborations studying human-relevant diseases
+and biological systems.
 
 
-Projects
---------
-[Current projects|projects]
+Teaching Mission
+----------------
 
-References
-----------
-Available Upon Request.
+While teaching, my primary mission is to have my students experience
+the excitement of scientific discovery for themselves. Secondarily, I
+use that excitement to keep them engaged and interested in the
+material. While a graduate student at UC Riverside, I was a teaching
+assistant for [Introductory Biology, Genetics, Molecular Biology, and
+Developmental Biology](http://www.biology.ucr.edu/courses/UGcourses.html)
+
 
