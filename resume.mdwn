@@ -4,12 +4,12 @@ Introduction
 ------------
 
 A brief statement of my research interests and teaching mission
-follows, and my [Curriculum Vitæ](resume/curriculum_vitae)
-([pdf](resume/dla-cv.pdf)),
-[Research Statement](resume/research_statement)
+follows, and my [Curriculum Vitæ](curriculum_vitae)
+([pdf](dla-cv.pdf)),
+[Research Statement](research_statement)
 ([pdf](resume/research_statement.pdf)), and
-[Teaching Statement](resume/teaching_statement)
-([pdf](resume/teaching_statement.pdf)) are also available.
+[Teaching Statement](teaching_statement)
+([pdf](teaching_statement.pdf)) are also available.
 
 For my contact information or additional references, please e-mail
 <don@donarmstrong.com>
