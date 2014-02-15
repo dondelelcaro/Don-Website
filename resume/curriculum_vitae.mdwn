@@ -2,9 +2,9 @@
 Curriculum Vitæ
 ===============
 
-[Don Armstrong](http://www.donarmstrong.com/)
-<don@donarmstrong.com>
-<http://www.donarmstrong.com>
+* [Don Armstrong](http://www.donarmstrong.com/)
+* <don@donarmstrong.com>
+* <http://www.donarmstrong.com>
 
 Education
 ----------
@@ -150,11 +150,7 @@ Selected Presentations
   identification platform discovers novel genes in childhood-onset
   SLE.
 
-Projects
---------
-[Current projects|projects]
-
 References
 ----------
-Please e-mail for references
+Please e-mail <don@donarmstrong.com> for references
 
