@@ -20,8 +20,8 @@ ORG_GREP='-e .org$ -e .org_archive$ -e .org_done$'
 
 if [ "x$1" == "xdoit" ]; then
     if git status --porcelain -z | grep -z '^ M' | grep -zq $ORG_GREP; then
-        git status --porcelain -z | grep -z '^ M' | grep -z $ORG_GREP | \ 
-        sed -z 's/^ M//g' | \
+        git status --porcelain -z | grep -z '^ M' | grep -z $ORG_GREP | \
+            sed -z 's/^ M//g' | \
             xargs -0 git commit -m'update org files'
         git push;
     fi; 
