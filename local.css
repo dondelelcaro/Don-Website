@@ -459,7 +459,7 @@ li.L8 { list-style: upper-alpha; }
 	border-right: 1px solid #993300;
 	border-bottom: 1px solid #331100;
 	padding: 0px 0.5em 0px 0.5em;
-	font-family: "liberation_serifregular",sans-serif;
+	font-family: sans-serif;
 	font-weight: bold;
 	font-size: small;
 	text-decoration: none;
@@ -550,7 +550,7 @@ pre {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	font-family: "liberation_serifregular",sans-serif;
 	color: black;
 	background: white;
 }
