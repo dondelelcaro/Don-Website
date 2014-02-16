@@ -51,18 +51,18 @@ I developed novel bioinformatic methods which increase
 
 likelihood of identifying reproducible genetic associations using
 prior knowledge from publicly available databases and expert
-information [#Armstrong2008:function2gene]. Using these methods, I
-was able to identify genes previously unassociated with SLE in a
+information [#Armstrong2008:function2gene]. Using these methods, I was
+able to identify genes previously unassociated with SLE in a
 trio-based study [#Jacob2007:ar_lupus]. These genes were then
 replicated in a larger case-control study which was funded by the NIH
-on the basis of the original findings
-[#Jacob2009:sle_irak1],[#Armstrong2009:sle_gi]. Among other findings,
-this larger study identified a missense allele in NCF2 (H389Q,
-rs17849502) which was associated with SLE. Collaborative work
-indicated that H389Q altered the binding energy of NCF2 with VAV1
-using docking simulations, and in vitro experiments confirmed that
-H389Q altered NADPH oxidase function [#Jacob2012:sle_ncf2], thus
-identifying it as a causative SLE mutation.
+on the basis of the original findings [#Jacob2009:sle_irak1] ,
+[#Armstrong2009:sle_gi]. Among other findings, this larger study
+identified a missense allele in NCF2 (H389Q, rs17849502) which was
+associated with SLE. Collaborative work indicated that H389Q altered
+the binding energy of NCF2 with VAV1 using docking simulations, and in
+vitro experiments confirmed that H389Q altered NADPH oxidase function
+[#Jacob2012:sle_ncf2], thus identifying it as a causative SLE
+mutation.
 
 ## Cancer Stem Cells in Glioblastoma
 
