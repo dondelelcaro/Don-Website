@@ -51,22 +51,22 @@ I developed novel bioinformatic methods which increase
 
 likelihood of identifying reproducible genetic associations using
 prior knowledge from publicly available databases and expert
-information \cite{Armstrong2008:function2gene}. Using these methods, I
+information [#Armstrong2008:function2gene]. Using these methods, I
 was able to identify genes previously unassociated with SLE in a
-trio-based study \cite{Jacob2007:ar_lupus}. These genes were then
+trio-based study [#Jacob2007:ar_lupus]. These genes were then
 replicated in a larger case-control study which was funded by the NIH
 on the basis of the original findings
-\cite{Jacob2009:sle_irak1,Armstrong2009:sle_gi}. Among other findings,
+[#Jacob2009:sle_irak1],[#Armstrong2009:sle_gi]. Among other findings,
 this larger study identified a missense allele in NCF2 (H389Q,
 rs17849502) which was associated with SLE. Collaborative work
 indicated that H389Q altered the binding energy of NCF2 with VAV1
 using docking simulations, and in vitro experiments confirmed that
-H389Q altered NADPH oxidase function \cite{Jacob2012:sle_ncf2}, thus
+H389Q altered NADPH oxidase function [#Jacob2012:sle_ncf2], thus
 identifying it as a causative SLE mutation.
 
 ## Cancer Stem Cells in Glioblastoma
 
-Glioblastoma is a almost invariably fatal form of brain cancerwhich is
+Glioblastoma is a almost invariably fatal form of brain cancer[^survival_rate] which is
 diagnosed in \(\approx\) 9,000 people in the US annually. It is typified
 by high levels of chemotherapeutic-resistant recurrences, some of
 which is likely caused by cancer stem cells which are insensitive to
@@ -79,14 +79,14 @@ class-specific treatment of this devastating disease.
 ## Regulatory pathways underlying cranial arteriovenous malformations
 
 The mechanisms underlying the formation of arteriovenous
-malformations(AVMs) which
-occur in the brain are unknown. Using gene microarrays, qtPCR, and *in
-vitro* experiments on primary human endothelial cells cultured from
-resected AVMs, I indentified multiple gene regulation pathways, many
-of them novel, including the Id1/Thsb1 inhibitory pathway. Additional
-experiments indicated that the *in vitro* pathology of endothelial
-cells could be partially rescued using extracellular Thsb1
-\cite{Stapleton2011:thbs1}.
+malformations[^avm_definition] (AVMs) which occur in the brain are
+unknown. Using gene microarrays, qtPCR, and *in vitro* experiments on
+primary human endothelial cells cultured from resected AVMs, I
+indentified multiple gene regulation pathways, many of them novel,
+including the Id1/Thsb1 inhibitory pathway. Additional experiments
+indicated that the *in vitro* pathology of endothelial cells could be
+partially rescued using extracellular Thsb1
+[#Stapleton2011:thbs1].
 
 # Future research directions
 
@@ -120,9 +120,9 @@ can be run on architectures with vastly differing computational
 abilities (such as GPUs).
 
 To resolve this, I am in the process of actively developing new open
-source tools which are capable of running on massively parallel
-architectures using both multiple computers (openMPI) and multiple
-GPUs on the same computer (Nvidia's CUDA) to
+source tools[^extending_note] which are capable of running on
+massively parallel architectures using both multiple computers
+(openMPI) and multiple GPUs on the same computer (Nvidia's CUDA) to
 
 1.  Develop an open source massively parallel imputation method which
     can combine existing GWAS results with new deep sequencing
@@ -204,22 +204,39 @@ be able to build upon and improve my tools without being forced to
 reinvent them.
 
 
-\newpage
+[#Armstrong2009:sle_gi]: D L Armstrong et al. “Identification of new SLE-associated genes with a two-step
+    Bayesian study design”. In: Genes Immun. 10.5 (July 2009), pp. 446–456. doi:
+    10.1038/gene.2009.38.
+    
+[#Armstrong2008:function2gene]: Don L Armstrong, Chaim O Jacob, and Raphael Zidovetzki. “Function2Gene: a
+    gene selection tool to increase the power of genetic association studies by utilizing
+    public databases and expert knowledge”. In: BMC Bioinformatics 9 (2008), p. 311.
+    doi: 10.1186/1471-2105-9-311.
+    
+[#Jacob2009:sle_irak1]: Chaim O Jacob et al. “Identification of IRAK1 as a risk gene with critical role
+       in the pathogenesis of systemic lupus erythematosus”. In: Proc. Natl. Acad. Sci.
+        U.S.A. 106.15 (Apr. 2009), pp. 6256–6261. doi: 10.1073/pnas.0901181106.
 
-\printbibliography
-<div id="footnotes">
-<h2 class="footnotes">Footnotes: </h2>
-<div id="text-footnotes">
+[#Jacob2007:ar_lupus]: Chaim O Jacob et al. “Identification of novel susceptibility genes in childhood-
+    onset systemic lupus erythematosus using a uniquely designed candidate gene
+    pathway platform”. In: Arthritis Rheum. 56.12 (Dec. 2007), pp. 4164–4173. doi:
+    10.1002/art.23060.
 
-<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1">1</a></sup> <p>Only 4% of patients survive to 5 years after diagnosis</p></div>
+[#Jacob2012:sle_ncf2]: Chaim O Jacob et al. “Lupus-associated causal mutation in neutrophil cytosolic
+    factor 2 (NCF2) brings unique insights to the structure and function of NADPH
+    oxidase”. In: Proc. Natl. Acad. Sci. U.S.A. 109.2 (Jan. 2012), pp. 59–67. doi:
+       10.1073/pnas.1113251108.
 
-<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2">2</a></sup> <p>Direct artery to vein connection without an
-intervening capilary bed; leads to high pressure arterial flow in
-venous tissue and can lead to hemmorrhage and death.</p></div>
+[#Stapleton2011:thbs1]: Christopher J Stapleton et al. “Thrombospondin-1 modulates the angiogenic phe-
+     notype of human cerebral arteriovenous malformation endothelial cells”. In: Neu-
+      rosurgery 68.5 (May 2011), pp. 1342–1353. doi: 10.1227/NEU.0b013e31820c0a68.
 
-<div class="footdef"><sup><a id="fn.3" name="fn.3" class="footnum" href="#fnr.3">3</a></sup> <p>and extending existing open source tools where they
-exist</p></div>
+[survival_rate]: Only 4% of patients survive to 5 years after diagnosis
 
+[avm_definition]: Direct artery to vein connection without an
+    intervening capilary bed; leads to high pressure arterial flow in
+    venous tissue and can lead to hemmorrhage and death.
 
-</div>
-</div>
+[extending_note]: and extending existing open source tools where they
+    exist
+
