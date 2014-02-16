@@ -1,14 +1,13 @@
+[[!meta title="Projects"]]
 Projects
 ========
 
- These are some of the more recent publicly available projects that
- I've been working on. Most of the code here is available under the
- GPL, but check the licences in individual files or e-mail me if it is
- unclear. Everything here is primarily used by me, and may not be
- suitable for you. Feel free to e-mail me with any questions or
- patches, though. As always, Caveat Lector.
-
-
+These are some of the more recent publicly available projects that
+I've been working on. Most of the code here is available under the
+GPL, but check the licences in individual files or e-mail me if it is
+unclear. Everything here is primarily used by me, and may not be
+suitable for you. Feel free to e-mail me with any questions or
+patches, though. As always, Caveat Lector.
 
 Reference System
 ----------------
