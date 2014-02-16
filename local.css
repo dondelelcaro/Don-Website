@@ -623,8 +623,8 @@ body {
 }
 
 h1 { font: 120% "liberation_serifregular", sans-serif }
-h2 { font: bold 100% "liberation_serifbold",sans-serif }
-h3, h4, h5, h6 { font: bold 80% "liberation_serifbold",sans-serif }
+h2 { font: 100% "liberation_serifbold",sans-serif }
+h3, h4, h5, h6 { font: 80% "liberation_serifbold",sans-serif }
 
 /* Smaller headings for inline pages */
 .inlinepage h1 { font-size: 110% }
