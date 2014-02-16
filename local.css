@@ -580,7 +580,7 @@ body {
 .title {
 	display: block;
 	margin-top: .2em;
-	font: 140% sans-serif;
+	font-size: 180%
 }
 
 #searchform {
