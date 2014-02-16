@@ -387,7 +387,7 @@ input#searchbox {
 }
 
 /* highlight plugin */
-pre.hl { color:#404048; background-color:#ddf; }
+pre.hl { color:#404048; background-color:#eef; }
 .hl.num { color:#2020ff; }
 .hl.esc { color:#005858; }
 .hl.str { color:#2020ff; }
@@ -397,7 +397,7 @@ pre.hl { color:#404048; background-color:#ddf; }
 .hl.dir { color:#008200; }
 .hl.sym { color:#404048; }
 .hl.line { color:#ff00c0; }
-.hl.mark { background-color:#ffffbb; }
+.hl.mark { background-color:#ffb; }
 .hl.kwa { color:#008858; font-weight:bold; }
 .hl.kwb { color:#7040ff; font-weight:bold;}
 .hl.kwc { color:#87002f; font-weight:bold; }
