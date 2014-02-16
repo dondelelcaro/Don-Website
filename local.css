@@ -580,7 +580,7 @@ body {
 .title {
 	display: block;
 	margin-top: .2em;
-	font-size: 180%
+	font: 180% "liberation_serifregular", san-serif;
 }
 
 #searchform {
@@ -617,9 +617,9 @@ body {
 	font-size: 120%;
 }
 
-h1 { font: 120% sans-serif }
-h2 { font: bold 100% sans-serif }
-h3, h4, h5, h6 { font: bold 80% sans-serif }
+h1 { font: 120% "liberation_serifregular", sans-serif }
+h2 { font: bold 100% "liberation_serifbold",sans-serif }
+h3, h4, h5, h6 { font: bold 80% "liberation_serifbold",sans-serif }
 
 /* Smaller headings for inline pages */
 .inlinepage h1 { font-size: 110% }
@@ -657,10 +657,13 @@ div.recentchanges {
 }
 
 .sidebar {
-        border-bottom: 0;
-	border-right: 0;
+    border-bottom: 0;
+    border-right: 0;
 	border-top: 0;
 	margin-top: 0.5em;
 	padding: 0 0 0 2ex;
 	border-color: #999;
+}
+.sidebar p {
+    font-size: 120%;
 }
