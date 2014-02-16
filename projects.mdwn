@@ -5,6 +5,8 @@ Projects
 Here are some of the many projects I'm working on or have previously
 worked on.
 
+[[!toc levels=2]]
+
 Debian
 ======
 
