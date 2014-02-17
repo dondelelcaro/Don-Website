@@ -1,3 +1,4 @@
+[[!meta description="Don Armstrong's blog and web pages. Don Armstrong is a Bioinformatician and Debian Developer currently a postdoc at the University of Southern California and living in Riverside, CA."]]
 [[!if test="enabled(sidebar)" then="""
 [[!sidebar]]
 """ else="""
