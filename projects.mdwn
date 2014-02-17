@@ -67,6 +67,18 @@ wif scale (not woct).
  * [Download](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/wheel/wheel.tar.gz?tarball=1&root=RZ+Lab+CVS)
  * [CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/wheel/?root=RZ+Lab+CVS)
 
+Ikiwiki Plugins
+===============
+
+My entire website is now built using [ikiwiki](http://ikiwiki.info).
+Here are some ikiwiki plugins I have written:
+
+* [Sweavealike](http://git.donarmstrong.com/?p=ikiwiki_plugins.git;a=blob;f=sweavealike.pm;hb=HEAD)
+  is a plugin for [IkiWiki](http://ikiwiki.info) that tries to do some
+  of the useful things for IkiWiki that Sweave/Knitr does for R and
+  LaTeX. See [my blog post](/posts/introducingsweavealike) for more
+  information.
+
 
 Perl Modules
 ============
