@@ -226,7 +226,6 @@ div.recentchanges {
 .sidebar {
 	width: 20ex;
 	float: right;
-    vertical-align: top;
 	margin-left: 4px;
 	margin-bottom: 4px;
 	margin-top: -1px;
