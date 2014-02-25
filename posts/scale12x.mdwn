@@ -14,5 +14,5 @@ If you're in the Southern California area, or have a chance to give a
 talk for SCALE 13x, you should do so! Thanks again to Matt Kraai and
 Paul Hardy for helping out in the Debian booth all weekend!
 
-[[!tags debian scale tech]]
+[[!tag debian scale tech]]
 
