@@ -1,0 +1,4 @@
+[[!meta title="pages tagged scale"]]
+
+[[!inline pages="tagged(scale)" actions="no" archive="yes"
+feedshow=10]]
