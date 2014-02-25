@@ -1,0 +1,18 @@
+[[!meta title="Debian Booth at Scale 12x"]]
+
+I spent the weekend at
+[SCALE 12x](http://www.socallinuxexpo.org/blog/scale-12x) running the
+[Debian](http://www.debian.org) booth. SCALE is one of the best
+conferences that I get to attend every year; it has a great mix of
+commercial exhibitors and community groups, and routinely gets great
+speakers. As I've done for quite some time, I organized a Debian booth
+there, and talked to lots of people about Debian.
+
+[[!agimg "2014/02_February/scale_12x_debian_booth.jpg"]]
+
+If you're in the Southern California area, or have a chance to give a
+talk for SCALE 13x, you should do so! Thanks again to Matt Kraai and
+Paul Hardy for helping out in the Debian booth all weekend!
+
+[[!tags debian scale tech]]
+
