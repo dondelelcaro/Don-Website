@@ -1,0 +1,16 @@
+[[!meta title="Dropbox Recursive Downloader"]]
+
+I'm working on some analyses for the
+[Genetic Analysis Workshop #19](http://www.gaworkshop.org/gaw19/index.html),
+which has placed it's data on Dropbox. Unfortunately, Dropbox doesn't
+allow for people to download zip archives larger than 1GB, and the
+data was made available in an unpacked structure with more than a
+hundred files. Some searching indicated that no one had written a
+recursive downloader for Dropbox, so 30 minutes of hacking with
+[WWW::Mechanize](http://search.cpan.org/~ether/WWW-Mechanize-1.73/lib/WWW/Mechanize.pm)
+later, I wrote a
+[simple recursive downloader for Dropbox](http://git.donarmstrong.com/?p=bin.git;a=blob;f=dropbox_recursive;hb=HEAD)
+
+Two hours later, all of the files had downloaded.
+
+[[!tag tech debian genetics]]
