@@ -1,5 +1,7 @@
 [[!meta title="ErgoDox keyboard assembly"]]
 
+[[!agimg don_lab/017_even_more_lab_desk_10232003.jpg]]
+
 I routinely use a Kinesis Advantage Pro keyboard, which is a split,
 ergonomic keyboard with thumb clusters that uses brown cherryMX
 switches. Over the thirteen years that I've been using it, I've become
@@ -12,8 +14,8 @@ the main key wells and the controller board in the middle occasionally
 fails, and requires disassembly and occasional re-tinning of the
 circuit board interconnect connector.
 
-[[!agimg don_lab/017_even_more_lab_desk_10232003.jpg]]
-
+[[!agimg 2014/08_August/20140801_ergodox/IMG_20140801_232557.jpg]]
+1
 About a year ago, I became aware of the [ErgoDox](http://ergodox.org/)
 keyboard, which is a keyboard design which mimics the kinesis to some
 degree, but with completely separated key halves (useful, because I'm
@@ -36,6 +38,5 @@ and flashing the firmware. This morning, I fixed up the few key
 bindings that I needed to be productive, and viola, my laptop at home
 now has a brand new ergonomic keyboard.
 
-[[!agimg 2014/08_August/20140801_ergodox/IMG_20140801_232557.jpg]]
 
-[[!tag tech debian r debbugs]]
+[[!tag tech debian keyboards]]
