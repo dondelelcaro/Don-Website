@@ -1,0 +1,41 @@
+[[!meta title="ErgoDox keyboard assembly"]]
+
+I routinely use a Kinesis Advantage Pro keyboard, which is a split,
+ergonomic keyboard with thumb clusters that uses brown cherryMX
+switches. Over the thirteen years that I've been using it, I've become
+a huge fan of this style of keyboard. However, I have two major
+annoyances with the Kinesis. First, while the firmware is good,
+remapping the keys is complicated and producing more complicated
+keyboard layouts with layers and keycodes that are not present in the
+original layout is not possible. Secondly, the interconnect between
+the main key wells and the controller board in the middle occasionally
+fails, and requires disassembly and occasional re-tinning of the
+circuit board interconnect connector.
+
+[[!agimg don_lab/017_even_more_lab_desk_10232003.jpg]]
+
+About a year ago, I became aware of the [ErgoDox](http://ergodox.org/)
+keyboard, which is a keyboard design which mimics the kinesis to some
+degree, but with completely separated key halves (useful, because I'm
+substantially bigger than the average human), programmable firmware
+(so I can finally have the layers and missing keys) and with slightly
+more elegant interconnects (TRRS cables). Unfortunately, at the time I
+first heard about it (and other custom keyboards), making it required
+sourcing circuit boards, parts, and finding someone to cut a case for
+the keyboard. Then, a few months ago, I learned about
+[MassDrop](http://www.massdrop.org), a company who puts together
+groups of people to do buys of products at near-wholesale level
+prices, and their offer of all of the parts to
+[build an ErgoDox](https://www.massdrop.com/buy/ergodox). After
+waiting for a group buy of the keyboard to become available, I put in
+an order, and received the parts two months later.
+
+Over a few hours yesterday, I learned how to do surface mount
+soldering of the 78 diodes (one for each key), and finished assembling
+and flashing the firmware. This morning, I fixed up the few key
+bindings that I needed to be productive, and viola, my laptop at home
+now has a brand new ergonomic keyboard.
+
+[[!agimg 2014/08_August/20140801_ergodox/IMG_20140801_232557.jpg]]
+
+[[!tag tech debian r debbugs]]
