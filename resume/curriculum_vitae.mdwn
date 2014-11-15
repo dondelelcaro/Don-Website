@@ -1,0 +1,154 @@
+[[!meta title="Curriculum Vitæ"]]
+Curriculum Vitæ
+===============
+
+* [Don Armstrong](http://www.donarmstrong.com/)
+* <don@donarmstrong.com>
+* <http://www.donarmstrong.com>
+
+Education
+----------
+* Doctor of Philosophy
+  * 2001-2008 **Cell, Molecular and Developmental Biology**.
+   [University of California at Riverside](http://www.ucr.edu).
+   Dissertation: The Role of membrane Composition in the Activity of
+   Membrane-Associated Signal Transduction Proteins.
+* Bachelor of Science
+  * 1997-2001 [Biology](http://bio.ucr.edu).
+    [University of California at Riverside](http://www.ucr.edu).
+    
+Postdoctoral Experience
+-------------------------
+
+### University of Southern California ###
+
+* 2013--Present. Postdoctoral researcher under Chaim O. Jacob.
+  Identifying genes and causal alleles associated with Systemic Lupus
+  Erythematosus using genome-wide association, next-generation
+  sequencing, computational and biochemical approaches.
+* 2009--2010. Postdoctoral researcher under Florence M. Hofman.
+  Identifying signaling pathways which are responsible for the
+  functional alteration of endothelial cells in glioblastoma
+  multiforme and arteriovenous malformations.
+
+### University of California at Riverside ###
+* 2010--2012. Postdoctoral researcher under Raphael Zidovetzki.
+  Identifying genes which are associated with Systemic Lupus
+  Erythematosus using prior information and targeted trio-based
+  studies.
+
+Teaching
+--------
+### Teaching Assistant ###
+* 2004--2007. University of California at Riverside. First and second
+  quarter introduction to biology for majors (BIO 5A and 5B).
+  Introduction to Genetics (BIO 102), Human Embryology (CBNS 169).
+
+Work in Industry
+----------------
+### Non-Profit ###
+* 2004--Present. [Debian Project](http://www.debian.org), Developer;
+  Technical Committee Member (2010--Present)
+
+### Employment Experience ###
+* 2002-2003. **Socratech** in Rochester, NY. Bioinformatics researcher:
+  developed new microarray analysis methods for a start-up
+  biotechnology company working on developing treatments for
+  Alzheimer's disease
+
+Publications
+------------
+## Refereed Publications ##
+1. **Don L. Armstrong**, Raphael Zidovetzki, and Chaim O Jacob. Novel
+  lupus associated genes discovered in GWAS; two signals explain all
+  HLA SNPs in European Americans. *Genes Immun*, In press.
+
+2. Chaim O Jacob, Miriam Eisenstein, Mary C Dinauer, Wenyu Ming,
+   Qiang Liu, Sutha John, Francesco P Quismorio, Andreas Reiff, Barry
+   L Myones, Kenneth M Kaufman, Deborah McCurdy, John B Harley, Earl
+   Silverman, Robert P Kimberly, Timothy J Vyse, Patrick M Gaffney,
+   Kathy L Moser, Marisa Klein-Gitelman, Linda Wagner-Weiner, Carl D
+   Langefeld, **Don L Armstrong**, and Raphael Zidovetzki.
+   Lupus-associated causal mutation in neutrophil cytosolic factor 2
+   (NCF2) brings unique insights to the structure and function of
+   NADPH oxidase. *Proc Natl Acad Sci USA*, 109(2):59--67, Jan 2012.
+3. **Don L Armstrong**, Omer Markovitch, Raphael Zidovetzki, and Doron
+   Lancet. Replication of simulated prebiotic amphiphile vesicles
+   controlled by experimental lipid physicochemical properties. *Phys
+   Biol*, 8(6):066001, Dec 2011.
+
+4. Christopher J Stapleton, **Don L Armstrong**, Raphael Zidovetzki,
+   Charles Y Liu, Steven L Giannotta, and Florence M Hofman.
+   Thrombospondin-1 modulates the angiogenic phenotype of human
+   cerebral arteriovenous malformation endothelial cells.
+   *Neurosurgery*, 68(5):1342--53, May 2011.
+
+5. **D L Armstrong**, A Reiff, B L Myones, F P Quismorio, M
+   Klein-Gitelman, D McCurdy, L Wagner-Weiner, E Silverman, J O
+   Ojwang, K M Kaufman, J A Kelly, J T Merrill, J B Harley, S-C Bae, T
+   J Vyse, G S Gilkeson, P M Gaffney, K L Moser, C Putterman, J C
+   Edberg, E E Brown, J Ziegler, C D Langefeld, R Zidovetzki, and C O
+   Jacob. Identification of new SLE-associated genes with a two-step
+   Bayesian study design. *Genes Immun*, 10(5):446--56, Jul 2009.
+
+6. Chaim O Jacob, Jiankun Zhu, **Don L Armstrong**, *et al.*
+   Identification of IRAK1 as a risk gene with critical role in the
+   pathogenesis of systemic lupus erythematosus. *Proc Natl Acad Sci
+   USA*, 106(15):6256--61, Apr 2009.
+
+7. Bahram Namjou, Andrea L Sestak, **Don L Armstrong**, Raphael
+   Zidovetzki, *et al.* High-density genotyping of STAT4 reveals
+   multiple haplotypic associations with systemic lupus erythematosus
+   in different racial groups. *Arthritis Rheum*, 60(4):1085--95, Apr 2009.
+
+8. **Don Armstrong** and Raphael Zidovetzki. Amplification of
+   diacylglycerol activation of protein kinase c by cholesterol.
+   *Biophys J*, 94(12):4700--10, Jun 2008.
+
+9. **Don L Armstrong**, Chaim O Jacob, and Raphael Zidovetzki.
+   Function2gene: a gene selection tool to increase the power of
+   genetic association studies by utilizing public databases and
+   expert knowledge. **BMC Bioinformatics**, 9:311, 2008.
+
+10. Chaim O Jacob, Andreas Reiff, **Don L Armstrong**, Barry L Myones,
+    Earl Silverman, Marisa Klein-Gitelman, Deborah McCurdy, Linda
+    Wagner-Weiner, James J Nocton, Aaron Solomon, and Raphael
+    Zidovetzki. Identification of novel susceptibility genes in
+    childhood-onset systemic lupus erythematosus using a uniquely
+    designed candidate gene pathway platform. *Arthritis Rheum*,
+    56(12):4164--73, Dec 2007.
+
+11. Raphael Zidovetzki, Burkhard Rost, *Don L Armstrong*, and Israel
+    Pecht. Transmembrane domains in the functions of fc receptors.
+    *Biophys Chem*, 100(1-3):555--75, 2003.
+
+12. **Don L Armstrong**, Dan B Borchardt, and Raphael Zidovetzki.
+    Synergistic perturbation of phosphatidylcholine/sphingomyelin
+    bilayers by diacylglycerol and cholesterol. *Biochem Biophys Res
+    Commun*, 296(4):806--12, Aug 2002.
+
+13. Zhenhua Wu, Huang Guo, Nienwen Chow, Jan Sallstrom, Robert D Bell, Rashid
+  Deane, Andrew I Brooks, Suhasini Kanagala, Anna Rubio, Abhay Sagare, Dong
+  Liu, Fang Li, **Don Armstrong**, Thomas Gasiewicz, Raphael Zidovetzki, Xiaomei
+  Song, Florence Hofman, and Berislav V Zlokovic. Role of the meox2 homeobox gene in neurovascular dysfunction in
+  alzheimer disease. *Nat Med*, 11(9):959--65, Sep 2005.
+
+14. Rashid Deane, Shi Du Yan, Ram Kumar Submamaryan, Barbara LaRue,
+    Suzana Jovanovic, Elizabeth Hogg, Deborah Welch, Lawrence Manness,
+    Chang Lin, Jin Yu, Hong Zhu, Jorge Ghiso, Blas Frangione, Alan
+    Stern, Ann Marie Schmidt, **Don L Armstrong**, Bernd Arnold,
+    Birgit Liliensiek, Peter Nawroth, Florence Hofman, Mark Kindy,
+    David Stern, and Berislav Zlokovic. Rage mediates amyloid-beta peptide transport across the blood-brain
+  barrier and accumulation in brain. *Nat Med*, 9(7):907--13, Jul 2003.
+
+Selected Presentations
+----------------------
+### Conference Presentations ###
+* 2007-06-07. FOCIS 2007. Uniquely designed candidate gene
+  identification platform discovers novel genes in childhood-onset
+  SLE.
+
+References
+----------
+Please e-mail <don@donarmstrong.com> for references
+

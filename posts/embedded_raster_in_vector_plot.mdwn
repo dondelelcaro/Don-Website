@@ -1,0 +1,64 @@
+[[!meta title="Plotting Embedded Bitmap in Vector Plot in R"]]
+
+Recently, one of my collaborators complained that one of my plots took
+forever to render on his machine. The particular plot in question had
+a few thousand points, many of which were overlapping. Ideally, R
+would be able to simplify the vector image which was drawn to avoid
+drawing points which were occluded by other points, but this is
+difficult to do properly, and R currently doesn't do it.
+
+However, R is able to plot to a bitmap, and bitmap images have the
+nice property of automatically handling this for you. Furthermore,
+raster images have recently been made far less clunky in R, so it's
+pretty easy to shove an arbitrary bitmap image anywhere. With
+`dev.capture` in Cairo coupled with `grid.raster` in grid, we have
+everything we need to solve this problem:
+
+[[!format R """
+require(grid)
+require(Cairo)
+
+start.rasterplot <- function(width=NULL,height=NULL) {
+    x.y.ratio <- convertX(unit(1,"npc"),"mm",valueOnly=TRUE)/
+        convertY(unit(1,"npc"),"mm",valueOnly=TRUE)
+    width.points <- as.numeric(convertX(unit(1,"npc"),"points"))
+    dpi <- as.numeric(convertX(unit(1,"inch"),"point"))
+    if (is.null(width) && is.null(height)) {
+        width <- 1024
+    }
+    if (is.null(width)) {
+        width <- height*x.y.ratio
+    }
+    if (is.null(height)) {
+        height <- width/x.y.ratio
+    }
+    Cairo(width=width,height=height,dpi=1024/width.points*dpi,file="/dev/null")
+}
+
+stop.rasterplot <- function(plot=TRUE) {
+    raster.image <- dev.capture(native=TRUE)
+    dev.off()
+    if (plot) {
+        grid.raster(raster.image,width=unit(1,"npc"),height=unit(1,"npc"))
+        return(invisible())
+    } else {
+        return(raster.image)
+    }
+}
+"""]]
+
+Now we can do the following:
+
+[[!format R """
+pdf(file="raster.pdf")
+start.rasterplot()
+print(xyplot(y~x,
+      data=data.frame(y=rnorm(1E8),x=rnorm(1E8))))
+stop.rasterplot()
+dev.off()
+"""]]
+
+and our PDF will contain a raster image, and will load in seconds
+instead of taking forever to plot the file.
+
+[[!tag r genetics biology]]

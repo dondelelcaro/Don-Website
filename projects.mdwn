@@ -1,69 +1,62 @@
-Projects
-========
+[[!meta title="Projects"]]
 
- These are some of the more recent publicly available projects that
- I've been working on. Most of the code here is available under the
- GPL, but check the licences in individual files or e-mail me if it is
- unclear. Everything here is primarily used by me, and may not be
- suitable for you. Feel free to e-mail me with any questions or
- patches, though. As always, Caveat Lector.
+Here are some of the many projects I'm working on or have previously
+worked on.
+
+[[!toc levels=2]]
+
+Debian
+======
+
+I use [Debian](http://www.debian.org) on all of my computers and
+regularly contribute to it. You can see some of the work I'm doing in
+Debian below.
+
+* [My Debian packages](http://qa.debian.org/developer.php?login=don)
+* [Debbugs](http://wiki.debian.org/Teams/Debbugs) -- the bug tracking
+  system for Debian
+* [Listmaster](http://wiki.debian.org/Teams/Listmaster) -- mailing
+  list maintainers for [lists.debian.org](http://lists.debian.org)
+* [Technical Committee](http://www.debian.org/devel/ctte) -- Debian's
+  technical decision making board; responsible for resolving technical
+  disputes between developers
 
 
+Debbugs
+-------
 
-Reference System
-----------------
+Debbugs is Debian's Bug Tracking System. I am currently the primary
+maintainer of debbugs. You can see what I'm working on in
+[my git repositories](http://git.donarmstrong.com/debbugs.git), what I
+need to work on in
+[Debbug's bug list](https://bugs.debian.org/debbugs),
+[read more information](http://wiki.debian.org/Teams/Debbugs) about
+contributing to Debbugs yourself, and see all of
+[my posts](/tags/debbugs/) about Debbugs.
 
-Originally written in PHP, the reference system is being totally
-rewritten in perl with mod_perl, postgresql and various other
-routines. It was originally designed to track scholarly articles and
-hold note and references related to them. However, the new version of
-the system will be used to track everything from books to images to
-newspapers to songs. Basically, it's a portable memory system that
-happens to be web based and accessible from any where in the planet.
 
- * [PHP CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/ref_php/?root=Ref+CVS)
- * [New CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/ref/?root=Ref+CVS)
-
-Utilities Modules
+Debian R Packages
 -----------------
-The new reference system has lead me to redesign many of the modules
-that I use alot. Most of them now can be plugged into and out of perl
-programs at will, decreasing development time of mod_perl based web
-projects. More importantly, it makes my code a lot more modular, and
-keeps me from going insane tracking it all.
 
- * Class::Modular is a superclass that allows one to generate a single
-   class from modules spread throughout multiple files and overload
-   methods within that class at will. Da::DB inherits from
-   Class::Modular. [svn repository](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/?root=Class+Modular)
- * Da::DB is the main Database class. All (or almost all) database
-   interaction occurs through da_dbh objects or dynamically loaded sub
-   modules of Da::DB. (The new Template::Provider code is an example
-   of a loadable sub module.) [svn repository](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/?root=Da+DB)
+I maintain
+[builds of the vast majority of R packages for Debian](/r/debian_r).
+You can also see [my posts](/tags/debian-r) about the Debian-r archive.
 
-Micro Array Utilities
----------------------
-These R functions and a few perl scripts are used to analyse Gene
-Microarray data from affymetrix datafiles.
+Bioinformatics
+==============
 
-  * [CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/ma_utilities/?root=RZ+Lab+CVS)
-  * [Download](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/ma_utilities/ma_utilities.tar.gz?tarball=1&root=RZ+Lab+CVS)
+Below are some of the bioinformatics and biologically relevant tools I
+have built.
 
-LaTeX Math to PNG
------------------
-Converts LaTeX math formula to PNG files. ($$x^2_0+y^2_0=r^2_0$$)
-becomes ![rendered equation](http://rzlab.ucr.edu/scripts/latexmath2png/latexmath2png.pl)
+Postgresql Mirror of dbSNP
+--------------------------
 
- * [CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/latexmath2png/?root=RZ+Lab+CVS)
- * [Source](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/latexmath2png/latexmath2png.pl?rev=HEAD&root=RZ+Lab+CVS&content-type=text/vnd.viewcvs-markup)
- * [Download](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/latexmath2png/latexmath2png.tar.gz?tarball=1&root=RZ+Lab+CVS)
+Being able to query [dbSNP](http://www.ncbi.nlm.nih.gov/SNP/) locally
+is very useful for adding annotations to deep sequencing results and
+other DNA polymorphism based analyses. See how to set up a
+[postgresql mirror of dbsnp](/genetics/dbsnp_mirror/) yourself using
+my scripts.
 
-Diary Script
---------------------
-
- * [Source](diary/diary.html)
- * [Download](diary/diary.gz)
- 
 Helical Wheel Plots
 -------------------
 Plots alpha helical wheels with hydrophobic moment according to the
@@ -74,8 +67,35 @@ wif scale (not woct).
  * [Download](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/wheel/wheel.tar.gz?tarball=1&root=RZ+Lab+CVS)
  * [CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/wheel/?root=RZ+Lab+CVS)
 
-Frog's Leap Website
--------------------
-Various Scripts and HTML design for both the flash and html sections of the site using perl and javascript.
-* [Link](http://www.frogsleap.com)
+Ikiwiki Plugins
+===============
+
+My entire website is now built using [ikiwiki](http://ikiwiki.info).
+Here are some ikiwiki plugins I have written:
+
+* [Sweavealike](http://git.donarmstrong.com/?p=ikiwiki_plugins.git;a=blob;f=sweavealike.pm;hb=HEAD)
+  is a plugin for [IkiWiki](http://ikiwiki.info) that tries to do some
+  of the useful things for IkiWiki that Sweave/Knitr does for R and
+  LaTeX. See [my blog post](/posts/introducingsweavealike) for more
+  information.
+
+
+Perl Modules
+============
+
+* Class::Modular is a superclass that allows one to generate a single
+   class from modules spread throughout multiple files and overload
+   methods within that class at will. Da::DB inherits from
+   Class::Modular.
+   [svn repository](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/?root=Class+Modular)
+
+
+LaTeX Math to PNG
+-----------------
+Converts LaTeX math formula to PNG files. ($$x^2_0+y^2_0=r^2_0$$)
+becomes ![rendered equation](http://rzlab.ucr.edu/scripts/latexmath2png/latexmath2png.pl)
+
+ * [CVS](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/latexmath2png/?root=RZ+Lab+CVS)
+ * [Source](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/latexmath2png/latexmath2png.pl?rev=HEAD&root=RZ+Lab+CVS&content-type=text/vnd.viewcvs-markup)
+ * [Download](http://rzlab.ucr.edu/cgi-bin/viewcvs.cgi/latexmath2png/latexmath2png.tar.gz?tarball=1&root=RZ+Lab+CVS)
 

@@ -1,11 +1,13 @@
+[[!meta description="Don Armstrong's blog and web pages. Don Armstrong is a Bioinformatician and Debian Developer currently a postdoc at the University of Southern California and living in Riverside, CA."]]
+
+[[!inline pages="./posts/* and !*/Discussion" show="10"
+actions=yes rootpage="posts"]]
+
 [[!if test="enabled(sidebar)" then="""
 [[!sidebar]]
 """ else="""
 [[!inline pages=sidebar raw=yes]]
 """]]
-
-[[!inline pages="./posts/* and !*/Discussion" show="10"
-actions=yes rootpage="posts"]]
 
 
 This blog is powered by [ikiwiki](http://ikiwiki.info).

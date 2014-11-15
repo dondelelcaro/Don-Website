@@ -5,6 +5,8 @@
  * local.css and use it to override or change settings in this one.
  */
 
+@import url("/fonts/liberationserif/stylesheet.css");
+
 /* html5 compat */
 article,
 header,
@@ -385,7 +387,7 @@ input#searchbox {
 }
 
 /* highlight plugin */
-pre.hl { color:#404048; background-color:#ddf; }
+pre.hl { color:#404048; background-color:#eef; }
 .hl.num { color:#2020ff; }
 .hl.esc { color:#005858; }
 .hl.str { color:#2020ff; }
@@ -395,7 +397,7 @@ pre.hl { color:#404048; background-color:#ddf; }
 .hl.dir { color:#008200; }
 .hl.sym { color:#404048; }
 .hl.line { color:#ff00c0; }
-.hl.mark { background-color:#ffffbb; }
+.hl.mark { background-color:#ffb; }
 .hl.kwa { color:#008858; font-weight:bold; }
 .hl.kwb { color:#7040ff; font-weight:bold;}
 .hl.kwc { color:#87002f; font-weight:bold; }
@@ -548,7 +550,7 @@ pre {
 body {
 	margin: 0;
 	padding: 0;
-	font-family: sans-serif;
+	font-family: "liberation_serifregular",sans-serif;
 	color: black;
 	background: white;
 }
@@ -562,13 +564,18 @@ body {
 	border-color: #999;
 	border-style: none none solid none;
 	border-width: 1px;
-        background-image: url('/images/da_background.jpg');
-        background-repeat: no-repeat;
+    background-image: url('/images/da_background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
 }
 
 .pageheader .header {
 	float: left;
 	font-size: 120%;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0.5em;
+    box-shadow: 4px 4px rgba(0, 0, 0, 0.2);
+    padding: 0.25em;
 }
 
 .header {
@@ -578,7 +585,7 @@ body {
 .title {
 	display: block;
 	margin-top: .2em;
-	font: 140% sans-serif;
+	font: 180% "liberation_serifregular", san-serif;
 }
 
 #searchform {
@@ -597,7 +604,9 @@ body {
 }
 
 #content, #comments, #footer {
-	margin: 1em 2em;
+	margin: 1em auto;
+    max-width: 55em;
+    text-align: justify;
 }
 
 #pageinfo {
@@ -615,9 +624,9 @@ body {
 	font-size: 120%;
 }
 
-h1 { font: 120% sans-serif }
-h2 { font: bold 100% sans-serif }
-h3, h4, h5, h6 { font: bold 80% sans-serif }
+h1 { font: 140% "liberation_serifbold", sans-serif }
+h2 { font: 100% "liberation_serifbold",sans-serif }
+h3, h4, h5, h6 { font: 80% "liberation_serifbold",sans-serif }
 
 /* Smaller headings for inline pages */
 .inlinepage h1 { font-size: 110% }
@@ -655,10 +664,13 @@ div.recentchanges {
 }
 
 .sidebar {
-        border-bottom: 0;
-	border-right: 0;
+    border-bottom: 0;
+    border-right: 0;
 	border-top: 0;
 	margin-top: 0.5em;
 	padding: 0 0 0 2ex;
 	border-color: #999;
+}
+.sidebar p {
+    font-size: 120%;
 }
