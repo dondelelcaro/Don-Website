@@ -1,0 +1,26 @@
+[[!meta title="Virginia King selected for Debbugs FOSS Outreach Program for Women"]] 
+
+
+I'm glad to announce that Virginia King has been selected as one of
+the three interns for this round of the
+[FOSS Outreach Program for women](https://gnome.org/opw/#participants).
+Starting December 9th, and continuing until March 9th, she'll be
+working on improving the documentation of
+[Debian's bug tracking system](https://bugs.debian.org).
+
+The initial goal is to develop a Bug Triager Howto to help new
+contributors to Debian jump in and help existing teams triage bugs.
+We'll be getting in touch with some of the larger teams in Debian to
+help make this document as useful as possible. If you're a member of a
+team in Debian who would like this howto to address your specific
+workflow, please drop [me](mailto:don@debian.org) an e-mail, and we'll
+keep you in the loop.
+
+The secondary goals for this project are to:
+
+ * Improve documentation under http://www.debian.org/Bugs
+ * Document of bug-tags and categories
+ * Improve upstream debbugs documentation 
+
+
+[[!tag debian tech debbugs]]
